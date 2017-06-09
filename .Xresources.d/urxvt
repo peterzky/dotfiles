@@ -1,0 +1,27 @@
+URxvt.foreground: #C8C8C8
+URxvt.background: [40]#000000
+
+URxvt.bufferd: true
+URxvt.transparent: false
+URxvt.depth: 32
+URxvt.fadeColor: [0]black
+
+URxvt.saveLines: 32767
+URxvt.letterSpace: -1
+URxvt.lineSpace: 2
+
+URxvt.scrollBar:         false
+URxvt.scrollTtyOutput:   false
+URxvt.scrollWithBuffer:  true
+URxvt.scrollTtyKeypress: true
+
+URxvt.perl-ext-common: default,matcher,keyboard-select,url-select
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+URxvt.tabbed.autohide: true
+URxvt.tabbed.tab-title: title
+URxvt.matcher.button: 1
+URxvt.preeditType: OverTheSpot

@@ -1,0 +1,3 @@
+#include ".Xresources.d/urxvt"
+#include ".Xresources.d/color-gentoo"
+#include ".Xresources.d/fonts"
