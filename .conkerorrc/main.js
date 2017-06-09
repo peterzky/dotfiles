@@ -45,7 +45,7 @@ remove_hook("mode_line_hook", mode_line_adder(clock_widget));
 add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
 
 require("clicks-in-new-buffer.js");
-
+clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
 
 // downloads
 function update_save_path (info) {
