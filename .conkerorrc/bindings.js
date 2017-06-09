@@ -34,6 +34,5 @@ define_key(content_buffer_normal_keymap, "v", "caret-mode");
 define_key(content_buffer_normal_keymap, "O", "find-alternate-url");
 define_key(content_buffer_normal_keymap, "C-x C-k", "kill-other-buffers");
 
-//copy and paste
 define_key(minibuffer_keymap, "`", "minibuffer-abort");
 define_key(minibuffer_keymap, "C-l", "cmd_deleteWordBackward");
