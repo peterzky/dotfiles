@@ -1,5 +1,3 @@
-// autoproxy
-
 define_hook("proxy_mode_hook");
 
 interactive("proxy-auto",
