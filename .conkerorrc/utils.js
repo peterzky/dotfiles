@@ -96,6 +96,15 @@ function org_capture (url, title, selection, window) {
     shell_command_blind(cmd_str);
 }
 
+
+function org_capture_word (selection, window) {
+    var cmd_str = 'emacsclient \"org-protocol://vocabulary?word=' + selection +'\"';
+    if (window != null) {
+        window.minibuffer.message('Issuing ' + cmd_str);
+    }
+    shell_command_blind(cmd_str);
+}
+
 interactive("org-store-link",
           "Stores [[url][title]] as org link and copies url to emacs kill ring",
             function (I) {
@@ -112,8 +121,16 @@ interactive("org-capture",
                 encodeURIComponent(I.buffer.top_frame.getSelection()), I.window);
             });
 
+
+interactive("org-capture-word",
+         "Clip url, title, and selection to capture via org-protocol",
+            function (I) {
+                org_capture_word(encodeURIComponent(I.buffer.top_frame.getSelection()), I.window);
+            });
+
 define_key(content_buffer_normal_keymap, "C-c r", "org-capture");
 define_key(content_buffer_normal_keymap, "C-c l", "org-store-link");
+define_key(content_buffer_normal_keymap, "C-c w", "org-capture-word");
 
 // switch buffers
 function define_switch_buffer_key (key, buf_num) {
