@@ -1,6 +1,3 @@
-URxvt.foreground: #C8C8C8
-URxvt.background: [40]#000000
-
 URxvt.bufferd: true
 URxvt.transparent: false
 URxvt.depth: 32
