@@ -1,6 +1,6 @@
 // require("new-tabs.js");
 
-homepage = "google.com";
+homepage = "http://en.wikipedia.org/wiki/Special:Random";
 
 require("user-agent-policy");
 
@@ -21,6 +21,8 @@ view_source_use_external_editor = true;
 url_completion_use_history = true;
 minibuffer_auto_complete_default = true;
 isearch_scroll_center_vertically = true;
+
+url_remoting_fn = load_url_in_new_buffer;
 
 // user preference
 // auto proxy workaround
