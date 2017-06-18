@@ -1,6 +1,6 @@
-Xft.dpi: 190
+! Xft.dpi: 190
 Xcursor.size: 48
 
 Emacs.font: Iosevka-12
 
-URxvt.font: xft:Inziu IosevkaCC CL:size=22
+URxvt.font: xft:Inziu IosevkaCC CL:size=12
