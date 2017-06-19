@@ -3,7 +3,6 @@ undefine_key(content_buffer_normal_keymap, "g");
 undefine_key(content_buffer_normal_keymap, "o");
 undefine_key(content_buffer_normal_keymap, "C-e");
 undefine_key(content_buffer_normal_keymap, "C-y");
-undefine_key(content_buffer_normal_keymap, "v");
 undefine_key(content_buffer_anchor_keymap, "o");
 undefine_key(content_buffer_anchor_keymap, "u");
 
@@ -30,7 +29,7 @@ define_key(content_buffer_normal_keymap, "C-y", "cmd_scrollLineUp");
 define_key(content_buffer_normal_keymap, "p", "paste-url");
 define_key(content_buffer_normal_keymap, "t", "find-url-new-buffer");
 define_key(content_buffer_normal_keymap, "g u", "up");
-define_key(content_buffer_normal_keymap, "v", "caret-mode");
+define_key(content_buffer_normal_keymap, "C-2", "set-mark");
 define_key(content_buffer_normal_keymap, "O", "find-alternate-url");
 define_key(content_buffer_normal_keymap, "C-x C-k", "kill-other-buffers");
 
