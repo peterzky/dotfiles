@@ -22,7 +22,7 @@ url_completion_use_history = true;
 minibuffer_auto_complete_default = true;
 isearch_scroll_center_vertically = true;
 
-url_remoting_fn = load_url_in_new_buffer;
+// url_remoting_fn = load_url_in_new_buffer;
 
 // user preference
 // auto proxy workaround
@@ -42,9 +42,9 @@ user_pref('gfx.filter.nearest.force-enabled', true);
 user_pref('stagefright.force-enabled', true);
 
 // mode line
-remove_hook("mode_line_hook", mode_line_adder(clock_widget));
+// remove_hook("mode_line_hook", mode_line_adder(clock_widget));
 // add_hook("mode_line_hook", mode_line_adder(autoproxy_mode_line_widget));
-add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
+// add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
 
 require("clicks-in-new-buffer.js");
 clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
@@ -58,3 +58,10 @@ add_hook("download_added_hook", update_save_path);
 remove_hook("download_added_hook", open_download_buffer_automatically);
 
 mode_line_mode(false);
+
+require("new-tabs.js");
+
+// sheet.appendRelativePath(".conkerorrc/style.css");
+theme_load_paths.unshift("~/.conkerorrc/themes/");
+theme_unload("default");
+theme_load("gruvbox-dark-soft");

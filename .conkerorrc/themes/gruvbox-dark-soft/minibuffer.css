@@ -1,0 +1,66 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* minibuffer settings */
+
+#minibuffer {
+    background-color: #32302f;
+    color: #ebdbb2;
+    font-family: "Dejavu Sans Mono";
+    font-size: 12px;
+    border-top: 1px solid #32302f;
+}
+
+#minibuffer-prompt {
+    color: #d79921;
+    font-weight: bold;
+}
+
+#minibuffer-input {
+    background-color: #504945 !important;
+    color: #fbf1c7 !important;
+    font-weight: bold !important;
+}
+
+/* Tree Completions settings */
+
+tree.completions treecol {
+    -moz-binding: none !important;
+}
+
+tree.completions {
+    -moz-appearance: none !important;
+    font-family: "Dejavu Sans Mono";
+    font-size: 13px;
+    border: 0px !important;
+    margin: 0px !important;
+}
+
+tree.completions treechildren {
+    background-color: #3c3836 !important;
+    color: #ebdbb2 !important;
+}
+
+
+tree.completions treechildren::-moz-tree-row {
+    background-color: #3c3836 !important;
+}
+
+tree.completions treechildren::-moz-tree-row(current) {
+    background-color: #504945 !important;
+}
+
+tree.completions treechildren::-moz-tree-cell-text(completion-description) {
+    font-weight: bold !important;
+}
+
+tree.completions treechildren::-moz-tree-cell-text(current) {
+    /* color: #cc241d !important; */
+    color: indianred !important;
+    font-weight: bold;
+}
+
+tree.completions[hasicons="true"] treechildren::-moz-tree-image {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}

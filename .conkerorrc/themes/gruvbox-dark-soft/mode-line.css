@@ -1,0 +1,33 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* modeline settings */
+
+.mode-line {
+    background-color: #504945;
+    color: #ebdbb2;
+    font-family: "Dejavu Sans Mono";
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 1px;
+    border-bottom: 2px solid #24201e;
+    border-right: 2px solid #24201e;
+    border-left: 1px solid #24201e;
+    border-top: 1px solid #24201e;
+    box-shadow: inset 1px 1px 0 0 #8e8681;
+}
+
+.tab2[selected=true] {
+    background-color: #504945;
+    color: #ebdbb2;
+    font-family: "Dejavu Sans Mono";
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tab2 {
+    background-color: #ebdbb2;
+    color: #504945;
+    font-family: "Dejavu Sans Mono";
+    font-weight: bold;
+    font-size: 12px;
+}
