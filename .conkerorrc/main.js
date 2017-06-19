@@ -56,3 +56,5 @@ function update_save_path (info) {
 add_hook("download_added_hook", update_save_path);
 
 remove_hook("download_added_hook", open_download_buffer_automatically);
+
+mode_line_mode(false);
