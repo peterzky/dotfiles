@@ -3,4 +3,4 @@ Xcursor.size: 48
 
 Emacs.font: Iosevka-12
 
-URxvt.font: xft:Inziu IosevkaCC CL:size=12
+URxvt.font: xft:Inziu IosevkaCC CL:size=12, xft:Iosevka:size=12, xft:FontAwesome:size=12
