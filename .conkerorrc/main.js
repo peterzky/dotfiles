@@ -65,3 +65,5 @@ remove_hook("download_added_hook", open_download_buffer_automatically);
 theme_load_paths.unshift("~/.conkerorrc/themes/");
 theme_unload("default");
 theme_load("gruvbox-dark-soft");
+
+set_protocol_handler("magnet", find_file_in_path("qbittorrent"));
