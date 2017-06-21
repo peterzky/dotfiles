@@ -42,9 +42,9 @@ user_pref('gfx.filter.nearest.force-enabled', true);
 user_pref('stagefright.force-enabled', true);
 
 // mode line
-// remove_hook("mode_line_hook", mode_line_adder(clock_widget));
+remove_hook("mode_line_hook", mode_line_adder(clock_widget));
 // add_hook("mode_line_hook", mode_line_adder(autoproxy_mode_line_widget));
-// add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
+add_hook("mode_line_hook", mode_line_adder(buffer_count_widget), true);
 
 require("clicks-in-new-buffer.js");
 clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
@@ -57,9 +57,9 @@ add_hook("download_added_hook", update_save_path);
 
 remove_hook("download_added_hook", open_download_buffer_automatically);
 
-mode_line_mode(false);
+// mode_line_mode(false);
 
-require("new-tabs.js");
+// require("new-tabs.js");
 
 // sheet.appendRelativePath(".conkerorrc/style.css");
 theme_load_paths.unshift("~/.conkerorrc/themes/");
