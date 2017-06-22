@@ -1,6 +1,6 @@
 // require("new-tabs.js");
 
-homepage = "http://en.wikipedia.org/wiki/Special:Random";
+homepage = "http://google.com";
 
 require("user-agent-policy");
 
@@ -50,8 +50,7 @@ require("clicks-in-new-buffer.js");
 clicks_in_new_buffer_target = OPEN_NEW_BUFFER_BACKGROUND;
 
 // downloads
-function update_save_path (info) {
-    cwd = info.target_file.parent;
+function update_save_path (info) {cwd = info.target_file.parent;
 }
 add_hook("download_added_hook", update_save_path);
 
