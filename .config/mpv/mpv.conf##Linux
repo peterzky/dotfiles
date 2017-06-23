@@ -1,5 +1,5 @@
-autofit
-vo=vdpau
+profile=opengl-hq
+autofit-larger=70%x70%
 cache=yes
 cache-default=5000000
 cache-backbuffer=25000
