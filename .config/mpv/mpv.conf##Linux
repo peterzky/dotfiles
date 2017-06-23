@@ -1,4 +1,5 @@
 profile=opengl-hq
+screenshot-template='~/Desktop/%F (%P) %n'
 autofit-larger=70%x70%
 cache=yes
 cache-default=5000000
