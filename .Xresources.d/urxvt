@@ -12,7 +12,7 @@ URxvt.scrollTtyOutput:   false
 URxvt.scrollWithBuffer:  true
 URxvt.scrollTtyKeypress: true
 
-URxvt.perl-ext-common: default,matcher,keyboard-select,url-select
+URxvt.perl-ext-common: default,matcher,keyboard-select,url-select, selection-to-clipboard
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-u: perl:url-select:select_next
