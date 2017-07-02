@@ -40,7 +40,7 @@ interactive("switch-to-other-buffer",
 
 // mpv
 function mpv_player (url,window) {
-    var cmd_str = 'go_mpv '+'\"'+ url + '\"';
+    var cmd_str = 'go-mpv '+'\"'+ url + '\"';
     if (window != null) {
         window.minibuffer.message('Issuing ' + cmd_str);
     }
