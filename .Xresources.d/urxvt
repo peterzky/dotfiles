@@ -16,6 +16,8 @@ URxvt.perl-ext-common: default,matcher,keyboard-select,url-select, selection-to-
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-w: perl:clipboard:copy
+! URxvt.keysym.M-y: perl:clipboard:paste
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 URxvt.tabbed.autohide: true
