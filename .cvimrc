@@ -43,6 +43,12 @@ map <C-e> scrollPageDown
 map <C-y> scrollPageUp
 iunmap <C-y>
 imap <C-w> deleteWord
+imap <C-a> beginningOfLine
+imap <C-e> endOfLine
+imap <C-k> deleteToEnd
+imap <A-f> forwardWord
+imap <A-b> backwardWord
+imap <A-d> deleteWord
 mpvLink(link) -> {{
   var enclink = encodeURIComponent(link.href);
   httpRequest({url: 'http://127.0.0.1:3111'+ '/play/' + enclink, json: false},
