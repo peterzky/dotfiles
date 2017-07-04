@@ -2,7 +2,7 @@ set nohud
 let barposition = "top"
 map <M-x> :call openCommandBar<CR>
 set cncpcompletion
-map <C-e> :call openLinkSearchBar<CR>
+map <C-s> /
 set numerichints
 set autohidecursor
 set typelinkhints
