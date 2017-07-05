@@ -1,0 +1,4 @@
+set adjust-open "best-fit"
+set smooth-scroll "true"
+set font "Iosevka 12"
+set guioptions ""
