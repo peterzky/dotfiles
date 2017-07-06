@@ -5,3 +5,13 @@ set guioptions ""
 set statusbar-home-tilde "true"
 map <C-e> scroll down
 map <C-y> scroll up
+
+set default-bg "#1D1F21"
+set default-fg "#C5C8C6"
+
+set recolor true
+set recolor-darkcolor "#dcdccc"
+set recolor-lightcolor "#1f1f1f"
+
+set window-title-basename "true"
+set selection-clipboard "clipboard"
