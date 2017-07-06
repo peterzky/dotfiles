@@ -1,4 +1,5 @@
-set adjust-open "best-fit"
+set adjust-open "width"
 set smooth-scroll "true"
-set font "Iosevka 12"
+set font "Iosevka 10"
 set guioptions ""
+set statusbar-home-tilde "true"
