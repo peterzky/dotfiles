@@ -38,7 +38,7 @@ class my_edit(Command):
             # reference to the currently selected file.
             target_filename = self.fm.thisfile.path
 
-        # This is a generic function to print text in ranger.  
+        # This is a generic function to print text in ranger.
         self.fm.notify("Let's edit the file " + target_filename + "!")
 
         # Using bad=True in fm.notify allows you to print error messages:
@@ -131,7 +131,7 @@ class up(Command):
         hosts = paraconf.get_hostnames()
         # remove any wildcard host settings since they're not real servers
         hosts.discard("*")
-        return (self.start(1) + host + ":" for host in hosts)                
+        return (self.start(1) + host + ":" for host in hosts)
 
 
 class extracthere(Command):
@@ -177,3 +177,29 @@ class fasd(Command):
         if arg:
             directory = subprocess.check_output(["fasd", "-d"]+arg.split(), universal_newlines=True).strip()
             self.fm.cd(directory)
+
+
+# fzf_fasd - Fasd + Fzf + Ranger (Interactive Style)
+class fzf_fasd(Command):
+    """
+    :fzf_fasd
+
+    Jump to a file or folder using Fasd and fzf
+
+    URL: https://github.com/clvv/fasd
+    URL: https://github.com/junegunn/fzf
+    """
+    def execute(self):
+        import subprocess
+        if self.quantifier:
+            command="fasd | fzf -e -i --tac --no-sort | awk '{print $2}'"
+        else:
+            command="fasd | fzf -e -i --tac --no-sort | awk '{print $2}'"
+        fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
+        stdout, stderr = fzf.communicate()
+        if fzf.returncode == 0:
+            fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
+            if os.path.isdir(fzf_file):
+                self.fm.cd(fzf_file)
+            else:
+                self.fm.select_file(fzf_file)
