@@ -1,0 +1,10 @@
+#!/bin/sh
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/nsf/gocode
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/rogpeppe/godef
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u golang.org/x/tools/cmd/goimports
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/motemen/gore
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/alecthomas/gometalinter
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/zmb3/gogetdoc
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u golang.org/x/tools/cmd/guru
+http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u golang.org/x/tools/cmd/gorename
+gometalinter --install
