@@ -13,4 +13,4 @@ alias ydm='http_proxy="http://127.0.0.1:8123" \
 alias pbcopy='xclip --selection clipboard'
 alias pbpaste='xclip --selection clipboard -o'
 
-alias chromium='chromium --enable-native-gpu-memory-buffers'
+# alias chromium='chromium --enable-native-gpu-memory-buffers'

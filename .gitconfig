@@ -1,3 +1,5 @@
 [user]
 	email = peter.zky@qq.com
 	name = peterzky
+[magit]
+	hideCampaign = true
