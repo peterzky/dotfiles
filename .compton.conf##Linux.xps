@@ -1,6 +1,11 @@
 backend = "glx";
 paint-on-overlay = true;
 glx-no-stencil = true;
+glx-copy-from-front = false;
+# glx-use-copysubbuffermesa = false;
+glx-no-rebind-pixmap = true;
+# glx-swap-method = "exchange";
+
 vsync = "opengl-swc";
 xrender-sync = true;
 xrender-sync-fence = true;
