@@ -29,6 +29,7 @@ map <leader>6 :execute 6%<CR>
 map <leader>7 :execute 7%<CR>
 map <leader>8 :execute 8%<CR>
 map <leader>9 :execute 9%<CR>
+map <leader>` :buffer<Space>
 let qmark a = ["http://www.reddit.com", "http://twitter.com"]
 let i = "http://www.inoreader.com/web_pages"
 map u lastClosedTab
