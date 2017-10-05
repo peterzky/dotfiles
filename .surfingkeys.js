@@ -17,6 +17,7 @@ map('H', 'S');
 map('L', 'D');
 map('K', 'R');
 map('J', 'E');
+map('u','X');
 
 settings.hintAlign = "left";
 settings.tabsThreshold = 0;
