@@ -1,3 +1,7 @@
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+fi
+
 alias emt='emacsclient -nc'
 alias proxy='http_proxy="http://127.0.0.1:8123" https_proxy="http://127.0.0.1:8123"'
 alias yd='http_proxy="http://127.0.0.1:8123" \
