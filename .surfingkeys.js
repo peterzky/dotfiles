@@ -1,4 +1,4 @@
-mapkey('<Ctrl-c>p','open hint with mpv-server',mpv);
+mapkey('<Ctrl-f>','open hint with mpv-server',mpv);
 
 unmap('<Ctrl-i>');
 unmap('q');
