@@ -4,3 +4,4 @@
 .muttrc
 .mbsyncrc
 .msmtprc
+.aws/credentials
