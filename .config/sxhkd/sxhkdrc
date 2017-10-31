@@ -1,5 +1,18 @@
 # -*- mode: conf; -*-
 
+# applications
+super + c
+        tts -sel
+super + ctrl + d
+        dict -s
+super + e; {v,h,m,r}
+        urxvt -e {pamix,htop,musicbox,ranger}
+super + e; {e,c}
+        {emacsclient -nc,chromium}
+# volume
+XF86Audio{Raise,Lower}Volume
+        ponymix {increase,decrease} 4
+
 # terminal emulator
 super + shift + Return
 	urxvtc
@@ -63,22 +76,6 @@ super + ctrl + {l,s,p}
 super + {n,p}
         bspc node -f {prev,next}.local
 
-# applications
-super + c
-        tts -sel
-super + ctrl + d
-        dict -s
-super + e; {v,h,m,r}
-        urxvt -e {pamix,htop,musicbox,ranger}
-super + e; {e,c}
-        {emacsclient -nc,chromium}
-
-# volume
-XF86AudioRaiseVolume
-        ponymix increase 2
-
-XF86AudioLowerVolume
-        ponymix decrease 2
 
 
 # focus the node in the given direction
