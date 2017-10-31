@@ -110,9 +110,10 @@ label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-label-dimmed-foreground = ${colors.secondary}
+label-dimmed-foreground = ${colors.background-alt}
 label-dimmed-underline = ${colors.background}
 label-dimmed-focused-background = ${colors.background}
+label-dimmed-focused-foreground = ${colors.secondary}
 
 label-occupied = %index%
 label-occupied-padding = 2
