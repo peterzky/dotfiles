@@ -1,6 +1,8 @@
+# -*- mode: conf; -*-
+
 # terminal emulator
 super + shift + Return
-	urxvt
+	urxvtc
 
 # program launcher
 super + @space
@@ -14,12 +16,10 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # monitors
-super + {_,shift +}d
-        bspc {monitor -f,node -m} DP-3
-super + {_,shift +}s
-        bspc {monitor -f,node -m} DP-4
-super + {_,shift +}a
-        bspc {monitor -f,node -m} DVI-D-0
+super + {a,s,d}
+        bspc monitor -f '^{1,2,3}'
+super + shift + {a,s,d}
+        bspc node -m '^{1,2,3}'
 
 # quit bspwm normally
 super + alt + Escape
@@ -46,11 +46,11 @@ super + Return
 #
 
 # set the window state
-super + {t,shift + t,g,f}
+super + {t,shift + t,f, shift + f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {x,s,z}
+super + ctrl + {l,s,p}
 	bspc node -g {locked,sticky,private}
 
 #
@@ -116,7 +116,7 @@ super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
+super + ctrl + g
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
