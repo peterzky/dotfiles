@@ -6,6 +6,9 @@ super + shift + Return
 super + @space
 	rofi -show run
 
+super + w
+        rofi -show window
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -57,7 +60,7 @@ super + ctrl + {x,s,z}
 # focus the node for the given path jump
 # super + {p,b,comma,period}
 # 	bspc node -f @{parent,brother,first,second}
-super + {comma,period}
+super + {n,p}
         bspc node -f {prev,next}.local
 
 # applications
@@ -65,9 +68,9 @@ super + c
         tts -sel
 super + ctrl + d
         dict -s
-super + e; {v,h,e,r}
+super + e; {v,h,m,r}
         urxvt -e {pamix,htop,musicbox,ranger}
-super + e; {w,c}
+super + e; {e,c}
         {emacsclient -nc,chromium}
 
 # volume
@@ -94,7 +97,7 @@ super + {grave,Tab}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+	bspc {desktop -f,node -d} 'focused:^{1-9,10}.local'
 
 #
 # preselect
