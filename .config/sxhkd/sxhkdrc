@@ -1,12 +1,25 @@
 # -*- mode: conf; -*-
 
 # applications
+super + z
+       emacsclient -c -F '((name . "org-agenda") (alpha . (85 . 85)))' -e '(progn (org-todo-list)(delete-other-windows))'
 super + c
         tts -sel
 super + ctrl + d
         dict -s
-super + e; {v,h,m,r}
-        urxvt -e {pamix,htop,musicbox,ranger}
+
+super + e; v
+        urxvtc -name volumeFloat -e pamix
+
+super + e; h
+        urxvtc -name htopFloat -e htop
+
+super + e; r
+        urxvtc -name rangerFloat -e ranger
+
+super + e; m
+        urxvtc -name musicFloat -e musicbox
+
 super + e; {e,c}
         {emacsclient -nc,chromium}
 # volume
