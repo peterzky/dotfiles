@@ -47,9 +47,10 @@ bspc rule -a URxvt:musicFloat  state=floating follow=on rectangle=960x540+480+27
 bspc rule -a Emacs:org-agenda  state=floating follow=on rectangle=960x540+480+270
 
 # Application
+$HOME/.fehbg
+wmname LG3D
 xcape -e "Caps_Lock=Escape" &
 compton -b &
 urxvtd &
 unclutter &
-eval `cat ~/.fehbg` &
 emacs --daemon &
