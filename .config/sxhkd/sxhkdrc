@@ -9,21 +9,21 @@ super + c
 super + ctrl + d
         dict -s
 
-super + w; v
+super + e; v
       ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "pamix"
 
-super + w; h
+super + e; h
       ~/.config/bspwm/scripts/scratchpad.sh "htopFloat" "htop"
 
-super + w; r
+super + e; r
       ~/.config/bspwm/scripts/scratchpad.sh "rangerFloat" "ranger"
 
-super + w; m
+super + e; m
       ~/.config/bspwm/scripts/scratchpad.sh "musicFloat" "musicbox"
 
-
-super + w; {super + w,,w,c,q}
+super + e; {super + e,,e,c,q}
         {emacsclient -nc,emacsclient -nc,chromium,conkeror}
+
 # volume
 XF86Audio{Raise,Lower}Volume
         ponymix {increase,decrease} 4
