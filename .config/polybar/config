@@ -53,6 +53,13 @@ font-3 = FontAwesome:pixelsize=12;2
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
+[bar/xps13]
+inherit = main
+modules-left = bspwm xwindow
+modules-center =
+modules-right =  volume cpu memory temperature wlan date battery powermenu
+dpi = 192
+
 [bar/main]
 inherit = main
 monitor = DP-4
