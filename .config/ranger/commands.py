@@ -225,6 +225,7 @@ class widen(Command):
     def execute(self):
         self.fm.thisdir.narrow_filter = None
         self.fm.thisdir.refilter()
+        self.fm.execute_console("mark_files all=True val=False")
 
 class mark_tag_narrow(Command):
 
@@ -251,3 +252,4 @@ class mark_tag_narrow(Command):
         else:
             self.fm.thisdir.narrow_filter = None
         self.fm.thisdir.refilter()
+        self.fm.execute_console("mark_files all=True val=False")
