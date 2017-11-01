@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=org-protocol
-Exec=emacsclient -c -F '((name . "org-agenda") (alpha . (85 . 85)))' %u
+Exec=org-capture %u
 Type=Application
 Terminal=false
 Categories=System;
