@@ -1,0 +1,3 @@
+#!/bin/sh
+
+emacsclient -c -F '((name . "org-agenda") (alpha . (85 . 85)))' "$@"
