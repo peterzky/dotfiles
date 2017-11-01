@@ -9,21 +9,21 @@ super + c
 super + ctrl + d
         dict -s
 
-super + e; v
+super + w; v
       ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "pamix"
 
-super + e; h
+super + w; h
       ~/.config/bspwm/scripts/scratchpad.sh "htopFloat" "htop"
 
-super + e; r
+super + w; r
       ~/.config/bspwm/scripts/scratchpad.sh "rangerFloat" "ranger"
 
-super + e; w
+super + w; m
       ~/.config/bspwm/scripts/scratchpad.sh "musicFloat" "musicbox"
 
 
-super + e; {e,c}
-        {emacsclient -nc,chromium}
+super + w; {super + w,,w,c,q}
+        {emacsclient -nc,emacsclient -nc,chromium,conkeror}
 # volume
 XF86Audio{Raise,Lower}Volume
         ponymix {increase,decrease} 4
@@ -36,8 +36,8 @@ super + shift + Return
 super + @space
 	rofi -show run
 
-super + w
-        rofi -show window
+# super + w
+#         rofi -show window
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -55,7 +55,7 @@ super + minus
 super + {a,s,d}
         bspc monitor -f '^{1,2,3}'
 super + shift + {a,s,d}
-        bspc node -m '^{1,2,3}'
+        bspc node -m '^{1,2,3}' -f
 
 # quit bspwm normally
 super + alt + Escape

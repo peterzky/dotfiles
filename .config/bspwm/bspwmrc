@@ -51,5 +51,5 @@ xcape -e "Caps_Lock=Escape" &
 compton -b &
 urxvtd &
 unclutter &
-~/.fehbg &
+eval `cat ~/.fehbg` &
 emacs --daemon &
