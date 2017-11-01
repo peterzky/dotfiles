@@ -221,13 +221,33 @@ class toggle_flat(Command):
             self.fm.thisdir.flat = 0
             self.fm.thisdir.load_content()
 
-class tmsu_tag(Command):
-    """:tmsu_tag
+class widen(Command):
+    def execute(self):
+        self.fm.thisdir.narrow_filter = None
+        self.fm.thisdir.refilter()
 
-    Tags the current file with tmsu
-    """
+class mark_tag_narrow(Command):
+
+    do_mark = True
 
     def execute(self):
-        cf = self.fm.thisfile
+        cwd = self.fm.thisdir
+        tags = self.rest(1).replace(" ", "")
+        if not self.fm.tags or not cwd.files:
+            return
+        for fileobj in cwd.files:
+            try:
+                tag = self.fm.tags.tags[fileobj.realpath]
+            except KeyError:
+                continue
+            if not tags or tag in tags:
+                cwd.mark_item(fileobj, val=self.do_mark)
+        self.fm.ui.status.need_redraw = True
+        self.fm.ui.need_redraw = True
 
-        self.fm.run("tmsu tag \"{0}\" {1}".format(cf.basename, self.rest(1)))
+        if self.fm.thisdir.marked_items:
+            selection = [f.basename for f in self.fm.thistab.get_selection()]
+            self.fm.thisdir.narrow_filter = selection
+        else:
+            self.fm.thisdir.narrow_filter = None
+        self.fm.thisdir.refilter()
