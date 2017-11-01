@@ -29,6 +29,7 @@ bspc config pointer_follows_monitor true
 bspc rule -a Gimp state=floating follow=on
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a Gnuplot state=floating
 bspc rule -a mpv state=floating
 bspc rule -a feh state=floating
 bspc rule -a URxvt:volumeFloat state=floating follow=on rectangle=960x540+480+270

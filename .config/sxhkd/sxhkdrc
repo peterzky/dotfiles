@@ -2,23 +2,25 @@
 
 # applications
 super + z
-       emacsclient -c -F '((name . "org-agenda") (alpha . (85 . 85)))' -e '(progn (org-todo-list)(delete-other-windows))'
+     ~/.config/bspwm/scripts/org.sh
+
 super + c
         tts -sel
 super + ctrl + d
         dict -s
 
 super + e; v
-        urxvtc -name volumeFloat -e pamix
+      ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "pamix"
 
 super + e; h
-        urxvtc -name htopFloat -e htop
+      ~/.config/bspwm/scripts/scratchpad.sh "htopFloat" "htop"
 
 super + e; r
-        urxvtc -name rangerFloat -e ranger
+      ~/.config/bspwm/scripts/scratchpad.sh "rangerFloat" "ranger"
 
 super + e; m
-        urxvtc -name musicFloat -e musicbox
+      ~/.config/bspwm/scripts/scratchpad.sh "musicFloat" "musicbox"
+
 
 super + e; {e,c}
         {emacsclient -nc,chromium}
@@ -40,6 +42,14 @@ super + w
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# Make split ratios equal
+super + equal
+	bspc node @/ --equalize
+
+# Make split ratios balanced
+super + minus
+	bspc node @/ --balance
 
 # monitors
 super + {a,s,d}
@@ -73,7 +83,7 @@ super + Return
 
 # set the window state
 super + {t,shift + t,f, shift + f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t \~{tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
 super + ctrl + {l,s,p}
