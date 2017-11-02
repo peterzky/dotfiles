@@ -3,6 +3,7 @@ mapkey('<Ctrl-f>','open hint with mpv-server',mpv);
 unmap('<Ctrl-i>');
 unmap('q');
 iunmap('<Ctrl-f>');
+iunmap('<Ctrl-a>');
 
 
 map('J','gT');
@@ -14,6 +15,7 @@ map('<Ctrl-u>','e');
 map('<Ctrl-s>','/');
 map('<Space>a','gx0');
 map('<Space>e','gx$');
+map('<Space>fd','oh')
 map('H', 'S');
 map('L', 'D');
 map('K', 'R');
