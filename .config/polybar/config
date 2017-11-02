@@ -35,11 +35,11 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = Iosevka:pixelsize=11;1
-font-1 = unifont:fontformat=truetype:size=12:antialias=false;1
-font-2 = siji:pixelsize=12;1
-font-3 = FontAwesome:pixelsize=12;2
-font-4 = Nerd Font:pixelsize=12;1
-font-5 = Material Icons:pixelsize=12;2
+font-1 = Nerd Font:pixelsize=12;1
+font-2 = Material Icons:pixelsize=13;4
+font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
+font-4 = siji:pixelsize=12;1
+font-5 = FontAwesome:pixelsize=12;2
 
 
 ; tray-position = right
@@ -74,9 +74,11 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Iosevka:pixelsize=11;1
-font-1 = unifont:fontformat=truetype:size=12:antialias=false;1
-font-2 = siji:pixelsize=12;1
-font-3 = FontAwesome:pixelsize=12;4
+font-1 = Nerd Font:pixelsize=12;1
+font-2 = Material Icons:pixelsize=13;4
+font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
+font-4 = siji:pixelsize=12;1
+font-5 = FontAwesome:pixelsize=12;2
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -176,7 +178,7 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 label-monocle = M
-label-tiled = " "
+label-tiled = " "
 label-tiled-foreground = #91B496
 label-fullscreen = " "
 label-floating = " "
@@ -184,7 +186,7 @@ label-pseudotiled = " "
 label-locked = " "
 label-locked-foreground = #bd2c40
 label-sticky = " "
-label-sticky-foreground = #91B496
+label-sticky-foreground = #f5d76e
 label-private = " "
 label-private-foreground = #bd2c40
 
