@@ -84,7 +84,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 modules-left = bspwm xwindow
 modules-center =
-modules-right = filesystem volume cpu memory temperature wifi date battery powermenu
+modules-right = filesystem volume cpu memory temp-laptop wifi date battery powermenu
 dpi = 192
 
 [bar/main]
@@ -205,7 +205,7 @@ label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
-card = intel_backlight
+output = eDP-1
 
 format = <label> <bar>
 label = BL
@@ -347,11 +347,11 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = <label-charging> <animation-charging>
+format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-label-charging =  %percentage%%
-label-discharging = %percentage%% %time%
+label-charging = %percentage%%
+label-discharging = %percentage%%
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -365,7 +365,7 @@ ramp-capacity-1 =  
 ramp-capacity-2 =  
 ramp-capacity-3 =  
 ramp-capacity-4 =  
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-0 =  
 animation-charging-1 =  
@@ -373,7 +373,7 @@ animation-charging-2 =  
 animation-charging-3 =  
 animation-charging-4 =  
 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
 
 [module/temperature]
@@ -394,6 +394,26 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/temp-laptop]
+type = internal/temperature
+thermal-zone = 3
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
 
 [module/powermenu]
 type = custom/menu
