@@ -40,6 +40,7 @@ bspc config single_monocle	    true
 bspc config borderless_monocle	    false
 bspc config gapless_monocle	    false
 
+bspc rule -a calibre	       desktop='focused:^9' state=floating follow=on
 bspc rule -a Gimp	       desktop='focused:^8' state=floating follow=on
 bspc rule -a Lxappearance      state=floating
 bspc rule -a Kupfer.py	       focus=on
