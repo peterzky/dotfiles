@@ -32,6 +32,9 @@ XF86Search
 XF86Audio{Raise,Lower}Volume
         ponymix {increase,decrease} 4
 
+XF86AudioMute
+	ponymix toggle
+
 # terminal emulator
 super + shift + Return
 	urxvtc
