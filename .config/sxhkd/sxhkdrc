@@ -24,6 +24,10 @@ super + e; m
 super + e; {super + e,,e,c,q}
         {emacsclient -nc,emacsclient -nc,chromium,conkeror}
 
+# touchpad
+XF86Search
+       touchpad
+
 # volume
 XF86Audio{Raise,Lower}Volume
         ponymix {increase,decrease} 4
