@@ -1,4 +1,4 @@
-# -*- mode: conf; -*-
+# -*- mode: conf; eval: (reopen-as-yadm); -*-
 
 # applications
 super + z

@@ -1,4 +1,4 @@
-; -*- mode: conf; mode: rainbow; -*-
+; -*- mode: conf; mode: rainbow; eval: (reopen-as-yadm); -*-
 [colors]
 ; background = ${xrdb:color0:#222}
 ; first 2 digit is alpha value 225 in 255

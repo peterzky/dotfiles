@@ -1,4 +1,5 @@
 #! /bin/sh
+# -*- eval: (reopen-as-yadm); -*-
 
 sxhkd &
 
