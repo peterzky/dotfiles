@@ -55,6 +55,7 @@ bspc rule -a Emacs:org-agenda  state=floating follow=on rectangle=$rect
 # Application
 $HOME/.fehbg
 wmname LG3D
+xsetroot -cursor_name left_ptr
 xcape -e "Caps_Lock=Escape" &
 compton -b &
 urxvtd &
