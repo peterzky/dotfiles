@@ -1,4 +1,4 @@
-# This is an example resource file for rTorrent. Copy to  -*- mode: conf; -*-
+# This is an example resource file for rTorrent. Copy to  -*- mode: conf; eval: (reopen-as-yadm); -*-
 # ~/.rtorrent.rc and enable/modify the options as needed. Remember to
 # uncomment the options you wish to enable.
 
@@ -23,7 +23,7 @@ directory = ~/Downloads/torrent
 # Default session directory. Make sure you don't run multiple instance
 # of rtorrent using the same session directory. Perhaps using a
 # relative path?
-#session = ./session
+session = ~/.rtorrent.session
 
 # Watch a directory for new torrents, and stop those that have been
 # deleted.
