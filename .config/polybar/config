@@ -84,7 +84,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 modules-left = bspwm xwindow
 modules-center =
-modules-right = filesystem volume cpu memory temp-laptop wifi date battery powermenu
+modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi date battery powermenu
 dpi = 192
 
 [bar/main]
@@ -92,7 +92,7 @@ inherit = main
 monitor = DP-4
 modules-left = bspwm xwindow
 modules-center =
-modules-right =  filesystem volume cpu memory temperature lan date powermenu
+modules-right = pomodoro filesystem volume cpu memory temperature lan date powermenu
 
 [bar/left]
 inherit = main
@@ -107,6 +107,11 @@ monitor = DP-3
 modules-left = bspwm xwindow
 modules-center =
 modules-right =
+
+[module/pomodoro]
+type = custom/script
+interval = 1
+exec = org-pomodoro
 
 [module/xwindow]
 type = internal/xwindow
