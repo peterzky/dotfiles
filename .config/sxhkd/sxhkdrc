@@ -4,8 +4,11 @@
 super + z
      ~/.config/bspwm/scripts/org.sh
 
-super + c
-        tts -sel
+# tts
+super + {_, ctrl} + c
+        {tts -sel ,tts -clip}
+
+# dict
 super + ctrl + d
         dict -s
 
