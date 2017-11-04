@@ -43,7 +43,7 @@ XF86Audio{Next,Prev,Stop,Play}
 
 # terminal emulator
 super + shift + Return
-	urxvtc
+	alacritty
 
 # program launcher
 super + @space
