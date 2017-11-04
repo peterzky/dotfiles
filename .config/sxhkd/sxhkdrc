@@ -38,6 +38,9 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
 	ponymix toggle
 
+XF86Audio{Next,Prev,Stop,Play}
+	mpc {next,prev,stop,toggle}
+
 # terminal emulator
 super + shift + Return
 	urxvtc
