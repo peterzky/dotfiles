@@ -1,4 +1,4 @@
-colo industry
+colo default
 syntax on
 silent! map i ,v:colorscheme morning<Cr>,v
-silent! map o ,v:colorscheme industry<Cr>,v
+silent! map o ,v:colorscheme default<Cr>,v
