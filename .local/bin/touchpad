@@ -1,9 +1,11 @@
 #!/bin/sh
-if xinput list-props 12 | grep "Device Enabled (140):.*1" >/dev/null
-then
-  xinput disable 12
-  notify-send -u low -i mouse "Trackpad disabled"
+device=`xinput | grep Touchpad | sed 's/^.*id=//;s/\t//g;s/\[.*$//'`
+state=`xinput list-props "$device" | grep "Device Enabled" | grep -o "[01]$"`
+
+if [ $state == '1' ];then
+  xinput --disable $device
+  notify-send 'Touchpad Disabled'
 else
-  xinput enable 12
-  notify-send -u low -i mouse "Trackpad enabled"
+  xinput --enable $device
+  notify-send 'Touchpad Enabled'
 fi
