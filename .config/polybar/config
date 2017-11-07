@@ -89,7 +89,7 @@ dpi = 192
 
 [bar/main]
 inherit = main
-monitor = DP-2
+monitor = DP-4
 modules-left = bspwm xwindow
 modules-center =
 modules-right = pomodoro filesystem volume cpu memory temperature lan date powermenu
@@ -103,7 +103,7 @@ modules-right =
 
 [bar/right]
 inherit = main
-monitor = DP-5
+monitor = DP-3
 modules-left = bspwm xwindow
 modules-center =
 modules-right =
