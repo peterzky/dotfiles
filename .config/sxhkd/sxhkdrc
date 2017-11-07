@@ -7,9 +7,13 @@ super + z
 # tts
 super + {_, ctrl} + c
         {tts -sel ,tts -clip}
+button8
+      tts -sel
 
 # dict
 super + ctrl + d
+        dict -s
+button9
         dict -s
 
 super + e; v
