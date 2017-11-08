@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Ranger
+Exec=urxvt -name rangerFloat -e ranger %f
+MimeType=inode/directory;
