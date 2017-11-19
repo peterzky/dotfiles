@@ -1,3 +1,4 @@
+// -*- eval: (reopen-as-yadm); -*-
 mapkey('<Ctrl-f>','open hint with mpv-server',mpv);
 
 unmap('<Ctrl-i>');
@@ -22,6 +23,7 @@ map('K', 'R');
 map('J', 'E');
 map('u','X');
 
+Hints.numbericHints = true;
 settings.hintAlign = "left";
 settings.tabsThreshold = 0;
 settings.richHintsForKeystroke = 0;
