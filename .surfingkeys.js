@@ -23,7 +23,6 @@ map('K', 'R');
 map('J', 'E');
 map('u','X');
 
-Hints.numbericHints = true;
 settings.hintAlign = "left";
 settings.tabsThreshold = 0;
 settings.richHintsForKeystroke = 0;
