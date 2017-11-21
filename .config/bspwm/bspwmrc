@@ -17,9 +17,9 @@ if [[ $(hostname) == 'nixos' ]]; then
     polybar right &
 else
     bspc monitor -d 1 2 3 4 5 6 7 8 9 10
-    bspc config border_width	    6
+    bspc config border_width	    4
     bspc config window_gap	    6
-    rect=2000x1000+600+400
+    rect=960x540+480+270
     polybar xps13 &
 fi
 
