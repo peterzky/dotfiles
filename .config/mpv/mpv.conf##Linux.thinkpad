@@ -1,0 +1,7 @@
+autofit
+hwdec=vaapi-copy
+cache=yes
+cache-default=5000000
+cache-backbuffer=25000
+cache-initial=0
+cache-secs=20
