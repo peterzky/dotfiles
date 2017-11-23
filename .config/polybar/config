@@ -432,12 +432,12 @@ label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = Reboot
-menu-0-0-exec = sudo systemctl reboot
-menu-0-1 = Poweroff
-menu-0-1-exec = sudo systemctl poweroff
-menu-0-2 = Hibernate
-menu-0-2-exec = sudo systemctl hibernate
+menu-0-1 = Reboot
+menu-0-1-exec = sudo systemctl reboot
+menu-0-2 = Poweroff
+menu-0-2-exec = sudo systemctl poweroff
+menu-0-0 = Hibernate
+menu-0-0-exec = sudo systemctl hibernate
 
 
 [settings]
