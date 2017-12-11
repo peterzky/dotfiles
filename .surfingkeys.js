@@ -38,9 +38,11 @@ settings.theme = `
 
 function mpv() {
     Hints.create ('*[href]',function(element) {
-	var link = encodeURIComponent (element.href);
-	httpRequest({url: 'http://127.0.0.1:3111'+ '/play/' + link, json: false},
-		    function(res) { console.log(res.text); });
-
-    })
-}
+	var link = element.href;
+	var xhr = new XMLHttpRequest();
+	var data = JSON.stringify({"Url": link,"Method":"play"});
+	xhr.open("POST","http://127.0.0.1:3111/video/add/",true);
+	xhr.setRequestHeader("Content-type","application/json");
+	xhr.send(data);
+    }
+)}
