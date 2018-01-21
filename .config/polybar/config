@@ -283,7 +283,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/lan]
 type = internal/network
-interface = eth0
+interface = eno1
 interval = 3.0
 
 format-connected-underline = #55aa55
