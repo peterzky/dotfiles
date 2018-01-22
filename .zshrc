@@ -30,3 +30,7 @@ date_folder() {
 	cd $name
     fi
 }
+
+sendmail() {
+    emacsclient -c -F '((name . "org-agenda") (alpha . (85 . 85)))' -e '(gnus-dired-attach  (list "$1"))'
+}
