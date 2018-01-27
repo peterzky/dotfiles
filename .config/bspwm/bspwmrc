@@ -33,21 +33,22 @@ bspc config single_monocle	    true
 bspc config borderless_monocle	    false
 bspc config gapless_monocle	    false
 
-bspc rule -a calibre	       desktop='focused:^9' state=floating follow=on
-bspc rule -a Gimp	       desktop='focused:^8' state=floating follow=on
-bspc rule -a VirtualBox	       desktop='focused:^8' state=floating follow=on
-bspc rule -a Xournal	       desktop='focused:^8' state=floating follow=on
-bspc rule -a Lxappearance      state=floating
-bspc rule -a Kupfer.py	       focus=on
-bspc rule -a Screenkey	       manage=off
-bspc rule -a Gnuplot	       state=floating
-bspc rule -a mpv	       state=floating
-bspc rule -a feh	       state=floating
-bspc rule -a URxvt:volumeFloat state=floating	    follow=on	   rectangle=$rect
-bspc rule -a URxvt:rangerFloat state=floating	    follow=on	   rectangle=$rect
-bspc rule -a URxvt:htopFloat   state=floating	    follow=on	   rectangle=$rect
-bspc rule -a URxvt:musicFloat  state=floating	    follow=on	   rectangle=$rect
-bspc rule -a Emacs:org-agenda  state=floating	    follow=on	   rectangle=$rect
+bspc rule -a calibre	          desktop='focused:^9' state=floating follow=on
+bspc rule -a Gimp	          desktop='focused:^8' state=floating follow=on
+bspc rule -a "VirtualBox Manager" desktop='focused:^8' state=floating follow=on
+bspc rule -a "VirtualBox Machine" desktop='focused:^8' state=floating follow=on
+bspc rule -a Xournal	          desktop='focused:^8' state=floating follow=on
+bspc rule -a Lxappearance         state=floating
+bspc rule -a Kupfer.py	          focus=on
+bspc rule -a Screenkey	          manage=off
+bspc rule -a Gnuplot	          state=floating
+bspc rule -a mpv	          state=floating
+bspc rule -a feh	          state=floating
+bspc rule -a URxvt:volumeFloat    state=floating    follow=on   rectangle=$rect
+bspc rule -a URxvt:rangerFloat    state=floating    follow=on   rectangle=$rect
+bspc rule -a URxvt:htopFloat      state=floating    follow=on   rectangle=$rect
+bspc rule -a URxvt:musicFloat     state=floating    follow=on   rectangle=$rect
+bspc rule -a Emacs:org-agenda     state=floating    follow=on   rectangle=$rect
 
 # Application
 $HOME/.fehbg
