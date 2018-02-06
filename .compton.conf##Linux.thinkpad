@@ -1,4 +1,5 @@
-backend = "glx";
+#;;; -*- mode: conf; eval: (reopen-as-yadm); -*-
+backend = "xr_glx_hybrid";
 paint-on-overlay = true;
 glx-no-stencil = true;
 glx-copy-from-front = false;
@@ -11,7 +12,7 @@ xrender-sync = true;
 xrender-sync-fence = true;
 
 # Shadow
-shadow = false; # Enabled client-side shadows on windows.
+shadow = false; # Enoabled client-side shadows on windows.
 no-dock-shadow = true; # Avoid drawing shadows on dock/panel windows.
 no-dnd-shadow = true; # Don't draw shadows on DND windows.
 clear-shadow = true; # Zero the part of the shadow's mask behind the window (experimental).
@@ -34,6 +35,11 @@ shadow-exclude = [
  "class_g ?= 'fcitx'"
 ];
 
+# Fading
+fading = true; # Fade windows during opacity changes.
+fade-delta = 4; # The time between steps in a fade in milliseconds. (default 10).
+fade-in-step = 0.03; # Opacity change between steps while fading in. (default 0.028).
+fade-out-step = 0.03; # Opacity change between steps while fading out. (default 0.03).
 # Opacity
 detect-client-opacity = true;
 

@@ -1,3 +1,4 @@
+#;;; -*- mode: conf; -*-
 backend = "glx";
 paint-on-overlay = true;
 glx-no-stencil = true;
