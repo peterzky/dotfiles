@@ -3,3 +3,5 @@ patch:
     - schema: luna_pinyin_simp
   ascii_composer:
     good_old_caps_lock: false
+  "switcher/hotkeys":
+    - F4
