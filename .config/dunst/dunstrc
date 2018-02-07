@@ -1,4 +1,4 @@
-;;; -*- mode: conf; mode: rainbow; eval: (reopen-as-yadm); -*-
+#;;; -*- mode: conf; mode: rainbow; eval: (reopen-as-yadm); -*-
 [global]
 font = Iosevka 11
 frame_width = 0
@@ -63,7 +63,7 @@ ignore_newline	= no
 # right side of the screen.  Y is measured from the top and down respectevly.
 # The width can be negative. In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
-geometry = "300x5-30+20"
+geometry = "270x6-30+30"
 
 # The transparency of the window. range: [0; 100]
 # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
@@ -213,10 +213,23 @@ format	= "%s "%b""
 [music]
 appname	= musicbox
 summary	= "Now playing"
-urgency	= low
+urgency	= normal
 
 #[twitter]
 #    appname = Pidgin
 #    summary = *twitter.com*
 #    urgency = normal
-#
+[base16_low]
+    msg_urgency = low
+    background = "#282828"
+    foreground = "#585858"
+
+[base16_normal]
+    msg_urgency = normal
+    background = "#383838"
+    foreground = "#d8d8d8"
+
+[base16_critical]
+    msg_urgency = critical
+    background = "#ab4642"
+    foreground = "#e8e8e8"
