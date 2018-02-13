@@ -37,10 +37,10 @@ XF86Search
 
 # volume
 XF86Audio{Raise,Lower}Volume
-        ponymix {increase,decrease} 4
+	pactl set-sink-volume @DEFAULT_SINK@ {+4%,-4%}
 
 XF86AudioMute
-	ponymix toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86Audio{Next,Prev,Stop,Play}
 	mpc {next,prev,stop,toggle}
