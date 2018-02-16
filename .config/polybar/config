@@ -55,7 +55,8 @@ font-5 = FontAwesome:pixelsize=12;2
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
-[bar/xps13]
+[bar/thinkpad]
+monitor = ${env:MONITOR}
 width = 100%
 height = 20
 radius = 6.0

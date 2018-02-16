@@ -20,8 +20,13 @@ else
     bspc config border_width	    4
     bspc config window_gap	    6
     rect=960x540+480+270
-    polybar xps13 &
+    MONITOR=eDP-1 polybar thinkpad &
 fi
+
+# monitor setup
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
 
 bspc config focused_border_color    "#91B496"
 bspc config split_ratio		    0.5
