@@ -1,0 +1,4 @@
+# --external-downloader aria2c
+# --external-downloader-args -x16
+--proxy socks5://127.0.0.1:1080
+-o ~/Downloads/%(title)s.%(ext)s

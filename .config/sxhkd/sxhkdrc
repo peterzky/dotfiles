@@ -35,6 +35,10 @@ super + e; {super + e,e,c,q,x}
 XF86Search
        touchpad
 
+# external monitor
+XF86Tools
+     ~/.config/bspwm/scripts/extmon.sh
+
 # volume
 XF86Audio{Raise,Lower}Volume
 	pactl set-sink-volume @DEFAULT_SINK@ {+4%,-4%}
