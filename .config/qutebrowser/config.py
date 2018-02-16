@@ -18,6 +18,9 @@ config.bind('<meta+x>', 'set-cmd-text :')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('t', 'set-cmd-text -s :open -t')
+config.bind(' `', 'set-cmd-text -s :buffer')
+config.bind(' fd', 'set-cmd-text -s :quickmark-load -t')
+config.bind(' rr', 'config-source')
 
 # Bindings for command mode
 config.bind('<alt+n>', 'command-history-next', mode='command')
