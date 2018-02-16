@@ -1,5 +1,6 @@
 autofit
-hwdec=vaapi-copy
+vo=vaapi
+hwdec-codecs=all
 cache=yes
 cache-default=5000000
 cache-backbuffer=25000
