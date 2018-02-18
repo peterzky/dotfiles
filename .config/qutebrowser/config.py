@@ -85,6 +85,7 @@ c.tabs.title.alignment = 'left'
 c.tabs.title.format = '{title}'
 c.tabs.title.format_pinned = '{index}'
 c.tabs.width = '20%'
+c.tabs.wrap = False
 c.url.default_page = 'https://google.com/'
 c.url.start_pages = 'https://google.com'
 
@@ -157,7 +158,7 @@ c.aliases['gl'] = 'open http://gitlab.com/peterzky'
 config.bind(' `', 'set-cmd-text -s :buffer')
 config.bind(' fed', 'config-edit')
 config.bind(' dl', 'hint links spawn tmux new-window -n Download "youtube-dl \'{hint-url}\'"')
-config.bind(' fd', 'set-cmd-text -s :quickmark-load -t')
+config.bind(' fd', 'set-cmd-text -s :quickmark-load')
 config.bind(' pp', 'hint links spawn go-mpv {hint-url}')
 config.bind(' qq', 'quit')
 config.bind(' rr', 'config-source ;; message-info "reloaded!')
