@@ -3,17 +3,21 @@ import platform
 # machine independent settings
 if platform.node() == "thinkpad":
     c.zoom.default = '125%'
-    fontsize = '12'
+    fontsize = '11'
 else:
     c.zoom.default = '100%'
     fontsize = '10'
 
 # settings
 c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
-c.bindings.key_mappings = {'<Ctrl-g>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
+c.bindings.key_mappings = {'<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
 c.completion.quick = False
 c.confirm_quit = ['never']
+
+# proxy
 c.content.proxy = 'socks5://127.0.0.1:1080'
+# c.content.proxy = 'pac+file://home/peterzky/playground/whitelist.pac'
+
 c.editor.command = ['emacsclient', '-nc', '{file}']
 c.fonts.completion.category = 'bold ' + fontsize + 'pt "Iosevka"'
 c.fonts.completion.entry = fontsize + 'pt "Iosevka"'
@@ -27,18 +31,18 @@ c.fonts.messages.warning = fontsize + 'pt "Iosevka"'
 c.fonts.prompts = fontsize + 'pt "Iosevka"'
 c.fonts.statusbar = fontsize + 'pt "Iosevka"'
 c.fonts.tabs = 'bold ' + fontsize + 'pt "Iosevka"'
-c.hints.chars = 'qwerasdfjklhyuiop'
+c.hints.chars = '123456789'
 c.hints.dictionary = '/usr/share/dict/words'
 c.hints.hide_unmatched_rapid_hints = True
 c.hints.min_chars = 1
-c.hints.mode = 'letter'
+c.hints.mode = 'number'
 c.hints.next_regexes = ['\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b', '\\bcontinue\\b']
 c.hints.prev_regexes = ['\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b', '\\b(<<|«)\\b']
 c.hints.scatter = True
 c.hints.uppercase = False
 c.history_gap_interval = 30
 c.input.forward_unbound_keys = 'auto'
-c.input.insert_mode.auto_leave = False
+c.input.insert_mode.auto_leave = True
 c.input.insert_mode.auto_load = False
 c.input.insert_mode.plugins = False
 c.input.links_included_in_focus_chain = True
@@ -78,12 +82,77 @@ c.tabs.show = 'always'
 c.tabs.show_switching_delay = 800
 c.tabs.tabs_are_windows = False
 c.tabs.title.alignment = 'left'
-c.tabs.title.format = '{index}: {title}'
+c.tabs.title.format = '{title}'
 c.tabs.title.format_pinned = '{index}'
 c.tabs.width = '20%'
 c.url.default_page = 'https://google.com/'
-c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'git': 'https://github.com/search?q={}'}
 c.url.start_pages = 'https://google.com'
+
+# colors
+c.colors.completion.fg = "#899CA1"
+c.colors.completion.category.fg = "#F2F2F2"
+c.colors.completion.category.bg = "#555555"
+c.colors.completion.item.selected.fg = "#222222"
+c.colors.completion.item.selected.bg = "#FFFF00"
+c.colors.completion.item.selected.border.top = "#333333"
+c.colors.completion.item.selected.border.bottom = "#333333"
+c.colors.completion.match.fg = "#8A2F58"
+c.colors.statusbar.normal.fg = "#899CA1"
+c.colors.statusbar.normal.bg = "#222222"
+c.colors.statusbar.insert.fg = "#899CA1"
+c.colors.statusbar.insert.bg = "#222222"
+c.colors.statusbar.command.bg = "#555555"
+c.colors.statusbar.command.fg = "#F0F0F0"
+c.colors.statusbar.caret.bg = "#5E468C"
+c.colors.statusbar.caret.selection.fg = "white"
+c.colors.statusbar.progress.bg = "#333333"
+c.colors.statusbar.passthrough.bg = "#4779B3"
+c.colors.statusbar.url.fg = c.colors.statusbar.normal.fg
+c.colors.statusbar.url.success.http.fg = "#899CA1"
+c.colors.statusbar.url.success.https.fg = "#53A6A6"
+c.colors.statusbar.url.error.fg = "#8A2F58"
+c.colors.statusbar.url.warn.fg = "#914E89"
+c.colors.statusbar.url.hover.fg = "#2B7694"
+c.colors.tabs.bar.bg = "#222222"
+c.colors.tabs.even.fg = "#222222"
+c.colors.tabs.even.bg = "#899CA1"
+c.colors.tabs.odd.fg = "#222222"
+c.colors.tabs.odd.bg = "#899CA1"
+c.colors.tabs.selected.even.fg = "white"
+c.colors.tabs.selected.even.bg = "#222222"
+c.colors.tabs.selected.odd.fg = "white"
+c.colors.tabs.selected.odd.bg = "#222222"
+c.colors.tabs.indicator.start = "#222222"
+c.colors.tabs.indicator.stop = "#222222"
+c.colors.tabs.indicator.error = "#8A2F58"
+c.colors.hints.bg = "#CCCCCC"
+c.colors.hints.match.fg = "#000"
+c.colors.downloads.start.fg = "black"
+c.colors.downloads.start.bg = "#BFBFBF"
+c.colors.downloads.stop.fg = "black"
+c.colors.downloads.stop.bg = "#F0F0F0"
+c.colors.keyhint.fg = "#FFFFFF"
+c.colors.keyhint.suffix.fg = "#FFFF00"
+c.colors.keyhint.bg = "rgba(0, 0, 0, 80%)"
+c.colors.messages.error.bg = "#8A2F58"
+c.colors.messages.error.border = "#8A2F58"
+c.colors.messages.warning.bg = "#BF85CC"
+c.colors.messages.warning.border = c.colors.messages.warning.bg
+c.colors.messages.info.bg = "#333333"
+c.colors.prompts.fg = "#333333"
+c.colors.prompts.bg = "#DDDDDD"
+c.colors.prompts.selected.bg = "#4779B3"
+
+# search engines
+c.url.searchengines['DEFAULT'] = 'https://www.google.com/search?q={}'
+c.url.searchengines['a'] = 'https://wiki.archlinux.org/?search={}'
+c.url.searchengines['y'] = 'https://www.youtube.com/results?search_query={}'
+c.url.searchengines['g'] = 'https://github.com/search?q={}'
+c.url.searchengines['w'] = 'https://secure.wikimedia.org/wikipedia/en/w/index.php?title=Special%%3ASearch&search={}'
+
+# aliases
+c.aliases['gh'] = 'open http://github.com/peterzky'
+c.aliases['gl'] = 'open http://gitlab.com/peterzky'
 
 config.bind(' `', 'set-cmd-text -s :buffer')
 config.bind(' fed', 'config-edit')
@@ -91,22 +160,27 @@ config.bind(' dl', 'hint links spawn tmux new-window -n Download "youtube-dl \'{
 config.bind(' fd', 'set-cmd-text -s :quickmark-load -t')
 config.bind(' pp', 'hint links spawn go-mpv {hint-url}')
 config.bind(' qq', 'quit')
-config.bind(' rr', 'config-source')
+config.bind(' rr', 'config-source ;; message-info "reloaded!')
 config.bind('<', 'tab-move -')
 config.bind('<ctrl+g>', '<Escape>')
 config.bind('<meta+x>', 'set-cmd-text :')
 config.bind('>', 'tab-move +')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
-config.bind('gh', 'home')
 config.bind('i', 'hint inputs')
 config.bind('t', 'set-cmd-text -s :open -t')
+config.bind('ya', 'hint links yank')
+config.bind('gh', 'home')
+config.bind('<ctrl+e>','scroll-page 0 0.3')
+# org capture
+config.bind(' cl', 'yank title ;; spawn emacsclient "org-protocol://store-link?url={url}&title={clipboard}" ;; message-info "org store link {clipboard}"')
+
+# command mode binding
 config.bind('<alt+n>', 'command-history-next', mode='command')
 config.bind('<alt+p>', 'command-history-prev', mode='command')
 config.bind('<ctrl+n>', 'completion-item-focus next', mode='command')
 config.bind('<ctrl+p>', 'completion-item-focus prev', mode='command')
-# org capture
-config.bind(' cl', 'yank title ;; spawn emacsclient "org-protocol://store-link?url={url}&title={clipboard}"')
+config.bind('<ctrl+g>', 'leave-mode', mode='command')
 
 #insert mode binding
 config.bind('<ctrl+p>', 'fake-key <Up>', mode='insert')

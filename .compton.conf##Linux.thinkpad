@@ -1,13 +1,15 @@
 #;;; -*- mode: conf; eval: (reopen-as-yadm); -*-
-backend = "xr_glx_hybrid";
-paint-on-overlay = true;
-glx-no-stencil = true;
-glx-copy-from-front = false;
+backend = "xrender";
+# backend = "xr_glx_hybrid";
+# paint-on-overlay = true;
+# glx-no-stencil = true;
+# glx-copy-from-front = false;
 # glx-use-copysubbuffermesa = false;
-glx-no-rebind-pixmap = true;
+# glx-no-rebind-pixmap = true;
 # glx-swap-method = "exchange";
 
-vsync = "opengl-swc";
+# vsync = "opengl-swc";
+vsync = "drm";
 xrender-sync = true;
 xrender-sync-fence = true;
 
