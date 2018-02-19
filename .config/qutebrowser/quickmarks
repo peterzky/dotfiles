@@ -5,4 +5,5 @@ nixos package https://nixos.org/nixos/packages.html#
 nixos options https://nixos.org/nixos/options.html#
 nixos github https://github.com/NixOS/nixpkgs
 github peterzky https://github.com/peterzky
-bt 1337x http://1337x.to/home/
+torrent 1337x http://1337x.to/home/
+flat color http://bootflat.github.io/color-picker.html

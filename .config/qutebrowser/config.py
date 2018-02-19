@@ -31,8 +31,8 @@ c.fonts.messages.warning = fontsize + 'pt "Iosevka"'
 c.fonts.prompts = fontsize + 'pt "Iosevka"'
 c.fonts.statusbar = fontsize + 'pt "Iosevka"'
 c.fonts.tabs = 'bold ' + fontsize + 'pt "Iosevka"'
-c.hints.chars = '123456789'
-c.hints.dictionary = '/usr/share/dict/words'
+# c.hints.chars = '123456789'
+# c.hints.dictionary = '/home/peterzky/playground/words/words'
 c.hints.hide_unmatched_rapid_hints = True
 c.hints.min_chars = 1
 c.hints.mode = 'number'
@@ -90,14 +90,14 @@ c.url.default_page = 'https://google.com/'
 c.url.start_pages = 'https://google.com'
 
 # colors
-c.colors.completion.fg = "#899CA1"
+c.colors.completion.fg = "#D2D7D3"
 c.colors.completion.category.fg = "#F2F2F2"
 c.colors.completion.category.bg = "#555555"
 c.colors.completion.item.selected.fg = "#222222"
-c.colors.completion.item.selected.bg = "#FFFF00"
+c.colors.completion.item.selected.bg = "#E2B13C"
 c.colors.completion.item.selected.border.top = "#333333"
 c.colors.completion.item.selected.border.bottom = "#333333"
-c.colors.completion.match.fg = "#8A2F58"
+c.colors.completion.match.fg = "#C93756"
 c.colors.statusbar.normal.fg = "#899CA1"
 c.colors.statusbar.normal.bg = "#222222"
 c.colors.statusbar.insert.fg = "#899CA1"
@@ -126,15 +126,17 @@ c.colors.tabs.selected.odd.bg = "#222222"
 c.colors.tabs.indicator.start = "#222222"
 c.colors.tabs.indicator.stop = "#222222"
 c.colors.tabs.indicator.error = "#8A2F58"
-c.colors.hints.bg = "#CCCCCC"
-c.colors.hints.match.fg = "#000"
+
+# c.colors.hints.bg = "rgba(204,204,204,50%)"
+# c.colors.hints.match.fg = "#000"
+
 c.colors.downloads.start.fg = "black"
 c.colors.downloads.start.bg = "#BFBFBF"
 c.colors.downloads.stop.fg = "black"
 c.colors.downloads.stop.bg = "#F0F0F0"
 c.colors.keyhint.fg = "#FFFFFF"
 c.colors.keyhint.suffix.fg = "#FFFF00"
-c.colors.keyhint.bg = "rgba(0, 0, 0, 80%)"
+c.colors.keyhint.bg = "rgba(0, 0, 0, 50%)"
 c.colors.messages.error.bg = "#8A2F58"
 c.colors.messages.error.border = "#8A2F58"
 c.colors.messages.warning.bg = "#BF85CC"
@@ -158,6 +160,7 @@ c.aliases['gl'] = 'open http://gitlab.com/peterzky'
 config.bind(' `', 'set-cmd-text -s :buffer')
 config.bind(' fed', 'config-edit')
 config.bind(' dl', 'hint links spawn tmux new-window -n Download "youtube-dl \'{hint-url}\'"')
+config.bind(' dm', 'hint links spawn tmux new-window -n Download "youtube-dl -x -o \'~/Sync/music/%(title)s.(ext)s\' \'{hint-url}\'"')
 config.bind(' fd', 'set-cmd-text -s :quickmark-load')
 config.bind(' pp', 'hint links spawn go-mpv {hint-url}')
 config.bind(' qq', 'quit')
@@ -183,7 +186,7 @@ config.bind('<ctrl+n>', 'completion-item-focus next', mode='command')
 config.bind('<ctrl+p>', 'completion-item-focus prev', mode='command')
 config.bind('<ctrl+g>', 'leave-mode', mode='command')
 
-#insert mode binding
+# insert mode binding
 config.bind('<ctrl+p>', 'fake-key <Up>', mode='insert')
 config.bind('<ctrl+n>', 'fake-key <Down>', mode='insert')
 config.bind('<ctrl+g>', 'leave-mode' ,mode='insert')
@@ -197,3 +200,6 @@ config.bind('<ctrl+u>', 'fake-key <Shift-Home> ;; fake-key <Delete>', mode='inse
 config.bind('<alt+f>', 'fake-key <Ctrl-Right>', mode='insert')
 config.bind('<alt+b>', 'fake-key <Ctrl-Left>', mode='insert')
 config.bind('<alt+d>', 'fake-key <Ctrl-Delete>', mode='insert')
+
+# hint mode binding
+config.bind('<Return>','follow-hint current-url', mode='hint')

@@ -29,7 +29,7 @@ super + e; m
       ~/.config/bspwm/scripts/scratchpad.sh "musicFloat" "musicbox"
 
 super + e; {super + e,e,c,q,x}
-        {emacsclient -nc,emacsclient -nc,chromium,qutebrowser,xournal}
+        {emacsclient -nc,emacsclient -nc,conkeror,qutebrowser,xournal}
 
 # touchpad
 XF86Search

@@ -1,7 +1,7 @@
 extern=HDMI-1
 
 if xrandr | grep "$extern connected"; then
-    xrandr --output $extern --off
+    # xrandr --output $extern --off
     pkill compton
     pkill polybar
     while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done

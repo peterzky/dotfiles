@@ -88,6 +88,10 @@ modules-center =
 modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi date battery powermenu
 dpi = 110
 
+; override-redirect = true
+; wm-restack = bspwm
+
+
 [bar/main]
 inherit = main
 monitor = DP-4
