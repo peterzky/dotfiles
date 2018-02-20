@@ -1,4 +1,4 @@
-# -*- eval: (reopen-as-yadm); -*-
+# -*- mode: rainbow; mode: python; eval: (reopen-as-yadm); -*-
 import platform
 # machine independent settings
 if platform.node() == "thinkpad":
@@ -45,7 +45,7 @@ c.input.forward_unbound_keys = 'auto'
 c.input.insert_mode.auto_leave = True
 c.input.insert_mode.auto_load = False
 c.input.insert_mode.plugins = False
-c.input.links_included_in_focus_chain = True
+c.input.links_included_in_focus_chain = False
 c.input.partial_timeout = 5000
 c.input.rocker_gestures = False
 c.input.spatial_navigation = False
@@ -100,8 +100,8 @@ c.colors.completion.item.selected.border.bottom = "#333333"
 c.colors.completion.match.fg = "#C93756"
 c.colors.statusbar.normal.fg = "#899CA1"
 c.colors.statusbar.normal.bg = "#222222"
-c.colors.statusbar.insert.fg = "#899CA1"
-c.colors.statusbar.insert.bg = "#222222"
+c.colors.statusbar.insert.fg = "#222222"
+c.colors.statusbar.insert.bg = "#26A65B"
 c.colors.statusbar.command.bg = "#555555"
 c.colors.statusbar.command.fg = "#F0F0F0"
 c.colors.statusbar.caret.bg = "#5E468C"
@@ -176,8 +176,10 @@ config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('ya', 'hint links yank')
 config.bind('gh', 'home')
 config.bind('<ctrl+e>','scroll-page 0 0.3')
+
 # org capture
 config.bind(' cl', 'yank title ;; spawn emacsclient "org-protocol://store-link?url={url}&title={clipboard}" ;; message-info "org store link {clipboard}"')
+config.bind(' cc', 'yank title ;; spawn org-capture "org-protocol://capture?template=L&url={url}&title={clipboard}" ;; message-info "org store link {clipboard}"')
 
 # command mode binding
 config.bind('<alt+n>', 'command-history-next', mode='command')
@@ -203,3 +205,6 @@ config.bind('<alt+d>', 'fake-key <Ctrl-Delete>', mode='insert')
 
 # hint mode binding
 config.bind('<Return>','follow-hint current-url', mode='hint')
+
+# emacs
+config.bind('<Alt-w>','yank selection')

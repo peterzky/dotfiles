@@ -1,6 +1,6 @@
 // require("new-tabs.js");
 
-homepage = "http://google.com";
+homepage = "http://bing.com";
 
 require("user-agent-policy");
 
