@@ -321,6 +321,10 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
 format-volume = <ramp-volume> <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}

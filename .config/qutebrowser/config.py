@@ -3,10 +3,10 @@ import platform
 # machine independent settings
 if platform.node() == "thinkpad":
     c.zoom.default = '125%'
-    fontsize = '11'
+    fontsize = '12'
 else:
     c.zoom.default = '100%'
-    fontsize = '10'
+    fontsize = '11'
 
 # settings
 c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
