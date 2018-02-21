@@ -159,10 +159,15 @@ c.aliases['gl'] = 'open http://gitlab.com/peterzky'
 
 config.bind(' `', 'set-cmd-text -s :buffer')
 config.bind(' fed', 'config-edit')
+
+# youtube-dl
 config.bind(' dl', 'hint links spawn tmux new-window -n Download "youtube-dl \'{hint-url}\'"')
 config.bind(' dm', 'hint links spawn tmux new-window -n Download "youtube-dl -x -o \'~/Sync/music/%(title)s.(ext)s\' \'{hint-url}\'"')
 config.bind(' fd', 'set-cmd-text -s :quickmark-load')
-config.bind(' pp', 'hint links spawn go-mpv {hint-url}')
+# mpv
+c.aliases['mpv'] = 'spawn --userscript ~/.config/qutebrowser/scripts/view_in_mpv'
+config.bind(' pl', 'hint links spawn go-mpv {hint-url}')
+config.bind(' pp', 'mpv')
 config.bind(' qq', 'quit')
 config.bind(' rr', 'config-source ;; message-info "reloaded!')
 config.bind('<', 'tab-move -')
