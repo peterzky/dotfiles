@@ -183,7 +183,7 @@ config.bind('gh', 'home')
 config.bind('<ctrl+e>','scroll-page 0 0.3')
 
 # org capture
-c.aliases['org'] = 'spawn --userscript ~/.config/qutebrowser/scripts/orgh'
+c.aliases['org'] = 'spawn --userscript ~/.config/qutebrowser/scripts/org'
 config.bind(' cl', 'org -l')
 config.bind(' cc', 'org -c')
 config.bind(' cs', 'org -s')
