@@ -149,6 +149,7 @@ c.colors.prompts.selected.bg = "#4779B3"
 # search engines
 c.url.searchengines['DEFAULT'] = 'https://www.google.com/search?q={}'
 c.url.searchengines['a'] = 'https://wiki.archlinux.org/?search={}'
+c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages/?0&K={}'
 c.url.searchengines['y'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['g'] = 'https://github.com/search?q={}'
 c.url.searchengines['w'] = 'https://secure.wikimedia.org/wikipedia/en/w/index.php?title=Special%%3ASearch&search={}'
