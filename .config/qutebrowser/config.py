@@ -15,7 +15,7 @@ c.completion.quick = False
 c.confirm_quit = ['never']
 
 # proxy
-c.content.proxy = 'socks5://127.0.0.1:1080'
+c.content.proxy = 'http://127.0.0.1:3128'
 # c.content.proxy = 'pac+file://home/peterzky/playground/whitelist.pac'
 
 c.editor.command = ['emacsclient', '-nc', '{file}']
