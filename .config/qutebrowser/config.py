@@ -178,8 +178,10 @@ config.bind('gh', 'home')
 config.bind('<ctrl+e>','scroll-page 0 0.3')
 
 # org capture
-config.bind(' cl', 'yank title ;; spawn emacsclient "org-protocol://store-link?url={url}&title={clipboard}" ;; message-info "org store link {clipboard}"')
-config.bind(' cc', 'yank title ;; spawn org-capture "org-protocol://capture?template=L&url={url}&title={clipboard}" ;; message-info "org store link {clipboard}"')
+c.aliases['org'] = 'spawn --userscript ~/.config/qutebrowser/scripts/org.sh'
+config.bind(' cl', 'org -l')
+config.bind(' cc', 'org -c')
+config.bind(' cs', 'org -s')
 
 # command mode binding
 config.bind('<alt+n>', 'command-history-next', mode='command')
