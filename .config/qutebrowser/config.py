@@ -41,7 +41,7 @@ c.hints.prev_regexes = ['\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<
 c.hints.scatter = True
 c.hints.uppercase = False
 c.history_gap_interval = 30
-c.input.forward_unbound_keys = 'auto'
+c.input.forward_unbound_keys = 'all'
 c.input.insert_mode.auto_leave = True
 c.input.insert_mode.auto_load = False
 c.input.insert_mode.plugins = False
@@ -70,7 +70,7 @@ c.tabs.favicons.scale = 1.0
 c.tabs.favicons.show = True
 c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
 c.tabs.indicator.width = 3
-c.tabs.last_close = 'ignore'
+c.tabs.last_close = 'close'
 c.tabs.mousewheel_switching = True
 c.tabs.new_position.related = 'next'
 c.tabs.new_position.unrelated = 'last'
@@ -169,7 +169,11 @@ config.bind(' fd', 'set-cmd-text -s :quickmark-load')
 c.aliases['mpv'] = 'spawn --userscript ~/.config/qutebrowser/scripts/view_in_mpv'
 config.bind(' pl', 'hint links spawn go-mpv {hint-url}')
 config.bind(' pp', 'mpv')
-config.bind(' qq', 'quit')
+
+# config.bind(' <Tab>', 'tab-focus last')
+config.unbind('d')
+config.bind('q', 'tab-close')
+config.bind('<ctrl-q>' , 'record-macro')
 config.bind(' rr', 'config-source ;; message-info "reloaded!')
 config.bind('<', 'tab-move -')
 config.bind('<ctrl+g>', '<Escape>')
@@ -212,7 +216,7 @@ config.bind('<alt+b>', 'fake-key <Ctrl-Left>', mode='insert')
 config.bind('<alt+d>', 'fake-key <Ctrl-Delete>', mode='insert')
 
 # hint mode binding
-config.bind('<Return>','follow-hint current-url', mode='hint')
+# config.bind('<Return>','fake-key 0', mode='hint')
 
 # emacs
 config.bind('<Alt-w>','yank selection')
