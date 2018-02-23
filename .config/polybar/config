@@ -116,7 +116,7 @@ modules-right =
 [module/pomodoro]
 type = custom/script
 interval = 1
-exec = org-pomodoro
+exec = emacsclient -e '(polybar-pomodoro)' | tr -d '()"'
 
 [module/xwindow]
 type = internal/xwindow
@@ -306,11 +306,11 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date-alt =
+date = " %Y-%m-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time-alt = %H:%M
+time = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
