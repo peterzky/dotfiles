@@ -20,6 +20,7 @@ alias ydm='http_proxy="http://127.0.0.1:8123" \
 alias pbcopy='xclip --selection clipboard'
 alias pbpaste='xclip --selection clipboard -o'
 alias tm="tmux attach || tmux new"
+alias tn="tmux new"
 
 date_folder() {
     local name=`date +%Y-%m-%d`
