@@ -116,6 +116,7 @@ modules-right =
 [module/pomodoro]
 type = custom/script
 interval = 1
+exec-if = test -S /tmp/emacs1000/server
 exec =  emacsclient -e '(polybar-pomodoro)' | tr -d '"' | sed 's/\[/[%{F#C0392B}/g ; s/\]/%{F-}]/g ; s/(/%{F#E2B13C}/g ; s/)/%{F-}/g'
 
 [module/xwindow]
