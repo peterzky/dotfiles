@@ -22,7 +22,7 @@ alias pbpaste='xclip --selection clipboard -o'
 alias tm="tmux attach || tmux new"
 alias tn="tmux new"
 
-date_folder() {
+date-folder() {
     local name=`date +%Y-%m-%d`
     if [ -d $name ]; then
 	cd $name
@@ -32,6 +32,6 @@ date_folder() {
     fi
 }
 
-sendmail() {
-    emacsclient -c -F '((name . "org-agenda") (alpha . (85 . 85)))' -e '(gnus-dired-attach  (list "$1"))'
+nix-path() {
+    ag --depth 1 -g $1 /nix/store/
 }
