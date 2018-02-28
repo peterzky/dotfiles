@@ -21,6 +21,7 @@ alias pbcopy='xclip --selection clipboard'
 alias pbpaste='xclip --selection clipboard -o'
 alias tm="tmux attach || tmux new"
 alias tn="tmux new"
+alias r="ranger-cd"
 
 date-folder() {
     local name=`date +%Y-%m-%d`
@@ -34,4 +35,18 @@ date-folder() {
 
 nix-path() {
     ag --depth 1 -g $1 /nix/store/
+}
+
+nix-find() {
+    readlink -f ${which $1}
+}
+
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
 }
