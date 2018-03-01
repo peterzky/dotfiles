@@ -22,7 +22,7 @@ super + e; v
 super + e; h
       ~/.config/bspwm/scripts/scratchpad.sh "htopFloat" "htop"
 
-super + e; r
+super + f
       ~/.config/bspwm/scripts/scratchpad.sh "rangerFloat" "ranger"
 
 super + e; m
@@ -106,8 +106,8 @@ super + Return
 #
 
 # set the window state
-super + {t,shift + t,f, shift + f}
-	bspc node -t \~{tiled,pseudo_tiled,floating,fullscreen}
+super + {t,shift + t, shift + f}
+	bspc node -t \~{floating,pseudo_tiled,fullscreen}
 
 # set the node flags
 super + ctrl + {apostrophe,s,p}
