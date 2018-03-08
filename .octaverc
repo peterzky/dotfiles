@@ -1,1 +1,2 @@
-# graphics_toolkit('gnuplot')
+graphics_toolkit('gnuplot')
+crash_dumps_octave_core(0)
