@@ -8,8 +8,9 @@ alias emc='emacsclient -nw'
 alias proxy='http_proxy="http://127.0.0.1:8123" https_proxy="http://127.0.0.1:8123"'
 alias yd='http_proxy="http://127.0.0.1:8123" \
       	  https_proxy="http://127.0.0.1:8123" \
-	  youtube-dl --external-downloader aria2c \
-		     --external-downloader-args -x16'
+	  youtube-dl --ignore-config \
+                     --external-downloader aria2c \
+		     --external-downloader-args -x3'
 alias nixproxy='NIX_CURL_FLAGS="http://127.0.0.1:8123"'
 
 alias ydm='http_proxy="http://127.0.0.1:8123" \
