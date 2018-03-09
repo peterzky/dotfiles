@@ -25,7 +25,8 @@ alias tn="tmux new"
 alias r="ranger-cd"
 
 clear-cache() {
-    find ~/.cache -type f -atime +1 -delete
+    find ~/.cache -type f -atime +1 -print -delete
+    find ~/.cache -type f -size 2M -print -delete
 }
 
 date-folder() {
