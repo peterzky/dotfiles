@@ -24,6 +24,10 @@ alias tm="tmux attach || tmux new"
 alias tn="tmux new"
 alias r="ranger-cd"
 
+clear-cache() {
+    find ~/.cache -type f -atime +1 -delete
+}
+
 date-folder() {
     local name=`date +%Y-%m-%d`
     if [ -d $name ]; then
