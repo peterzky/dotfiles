@@ -44,7 +44,7 @@ nix-path() {
 }
 
 nix-find() {
-    readlink -f ${which $1}
+    readlink -f `which $1`
 }
 
 function ranger-cd {
