@@ -14,6 +14,7 @@ from ranger.core.loader import CommandLoader
 # You can import any python module as needed.
 import os
 
+
 # Any class that is a subclass of "Command" will be integrated into ranger as a
 # command.  Try typing ":my_edit<ENTER>" in ranger!
 class my_edit(Command):
@@ -69,16 +70,19 @@ class fzf_select(Command):
 
     See: https://github.com/junegunn/fzf
     """
+
     def execute(self):
         import subprocess
         if self.quantifier:
             # match only directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
+            command = "find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
             -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m"
+
         else:
             # match files and directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
+            command = "find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
             -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m"
+
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -92,7 +96,7 @@ class fzf_select(Command):
 class fasd_select(Command):
     def execute(self):
         import subprocess
-        command="fasd -ld | fzf +m"
+        command = "fasd -ld | fzf +m"
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -102,15 +106,16 @@ class fasd_select(Command):
             else:
                 self.fm.select_file(fzf_file)
 
+
 class up(Command):
     def execute(self):
         if self.arg(1):
             scpcmd = ["scp", "-r"]
-            scpcmd.extend([f.realpath for f in self.fm.thistab.get_selection()])
+            scpcmd.extend(
+                [f.realpath for f in self.fm.thistab.get_selection()])
             scpcmd.append(self.arg(1))
             self.fm.execute_command(scpcmd)
             self.fm.notify("Uploaded!")
-
 
     def tab(self):
         import os.path
@@ -158,12 +163,14 @@ class extracthere(Command):
         if len(copied_files) == 1:
             descr = "extracting: " + os.path.basename(one_file.path)
         else:
-            descr = "extracting files from: " + os.path.basename(one_file.dirname)
+            descr = "extracting files from: " + os.path.basename(
+                one_file.dirname)
         obj = CommandLoader(args=['aunpack'] + au_flags \
                 + [f.path for f in copied_files], descr=descr)
 
         obj.signal_bind('after', refresh)
         self.fm.loader.add(obj)
+
 
 class fasd(Command):
     """
@@ -171,11 +178,13 @@ class fasd(Command):
 
     Jump to directory using fasd
     """
+
     def execute(self):
         import subprocess
         arg = self.rest(1)
         if arg:
-            directory = subprocess.check_output(["fasd", "-d"]+arg.split(), universal_newlines=True).strip()
+            directory = subprocess.check_output(
+                ["fasd", "-d"] + arg.split(), universal_newlines=True).strip()
             self.fm.cd(directory)
 
 
@@ -189,12 +198,13 @@ class fzf_fasd(Command):
     URL: https://github.com/clvv/fasd
     URL: https://github.com/junegunn/fzf
     """
+
     def execute(self):
         import subprocess
         if self.quantifier:
-            command="fasd | fzf -e -i --tac --no-sort | awk '{print $2}'"
+            command = "fasd | fzf -e -i --tac --no-sort | awk '{print $2}'"
         else:
-            command="fasd | fzf -e -i --tac --no-sort | awk '{print $2}'"
+            command = "fasd | fzf -e -i --tac --no-sort | awk '{print $2}'"
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -203,6 +213,7 @@ class fzf_fasd(Command):
                 self.fm.cd(fzf_file)
             else:
                 self.fm.select_file(fzf_file)
+
 
 class toggle_flat(Command):
     """
@@ -221,11 +232,13 @@ class toggle_flat(Command):
             self.fm.thisdir.flat = 0
             self.fm.thisdir.load_content()
 
+
 class widen(Command):
     def execute(self):
         self.fm.thisdir.narrow_filter = None
         self.fm.thisdir.refilter()
         self.fm.execute_console("mark_files all=True val=False")
+
 
 class mark_tag_narrow(Command):
 
