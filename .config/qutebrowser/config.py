@@ -45,11 +45,11 @@ c.hints.min_chars = 1
 c.hints.mode = 'number'
 c.hints.next_regexes = [
     '\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b',
-    '\\bcontinue\\b'
+    '\\bcontinue\\b', '\\下一页\\b', '\\下页\\b'
 ]
 c.hints.prev_regexes = [
     '\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b',
-    '\\b(<<|«)\\b'
+    '\\b(<<|«)\\b', '\\上一页\\b', '\\上页\\b'
 ]
 c.hints.scatter = True
 c.hints.uppercase = False
