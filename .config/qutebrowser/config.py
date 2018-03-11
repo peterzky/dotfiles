@@ -7,16 +7,25 @@ if platform.node() == "thinkpad":
 else:
     c.zoom.default = '100%'
     fontsize = '11'
+# qt settings
+c.qt.args = ["--autoplay-policy=user-gesture-required"]
 
 # settings
 c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
-c.bindings.key_mappings = {'<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
+c.bindings.key_mappings = {
+    '<Ctrl-6>': '<Ctrl-^>',
+    '<Ctrl-M>': '<Return>',
+    '<Ctrl-J>': '<Return>',
+    '<Shift-Return>': '<Return>',
+    '<Enter>': '<Return>',
+    '<Shift-Enter>': '<Return>',
+    '<Ctrl-Enter>': '<Ctrl-Return>'
+}
 c.completion.quick = False
 c.confirm_quit = ['never']
 
 # proxy
 c.content.proxy = 'http://127.0.0.1:3128'
-# c.content.proxy = 'pac+file://home/peterzky/playground/whitelist.pac'
 
 c.editor.command = ['emacsclient', '-nc', '{file}']
 c.fonts.completion.category = 'bold ' + fontsize + 'pt "Iosevka"'
@@ -31,13 +40,17 @@ c.fonts.messages.warning = fontsize + 'pt "Iosevka"'
 c.fonts.prompts = fontsize + 'pt "Iosevka"'
 c.fonts.statusbar = fontsize + 'pt "Iosevka"'
 c.fonts.tabs = 'bold ' + fontsize + 'pt "Iosevka"'
-# c.hints.chars = '123456789'
-# c.hints.dictionary = '/home/peterzky/playground/words/words'
 c.hints.hide_unmatched_rapid_hints = True
 c.hints.min_chars = 1
 c.hints.mode = 'number'
-c.hints.next_regexes = ['\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b', '\\bcontinue\\b']
-c.hints.prev_regexes = ['\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b', '\\b(<<|«)\\b']
+c.hints.next_regexes = [
+    '\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b',
+    '\\bcontinue\\b'
+]
+c.hints.prev_regexes = [
+    '\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b',
+    '\\b(<<|«)\\b'
+]
 c.hints.scatter = True
 c.hints.uppercase = False
 c.history_gap_interval = 30
@@ -153,7 +166,8 @@ c.url.searchengines['a'] = 'https://wiki.archlinux.org/?search={}'
 c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages/?0&K={}'
 c.url.searchengines['y'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['g'] = 'https://github.com/search?q={}'
-c.url.searchengines['w'] = 'https://secure.wikimedia.org/wikipedia/en/w/index.php?title=Special%%3ASearch&search={}'
+c.url.searchengines[
+    'w'] = 'https://secure.wikimedia.org/wikipedia/en/w/index.php?title=Special%%3ASearch&search={}'
 
 # aliases
 c.aliases['gh'] = 'open http://github.com/peterzky'
@@ -163,18 +177,24 @@ config.bind(' `', 'set-cmd-text -s :buffer')
 config.bind(' fed', 'config-edit')
 
 # youtube-dl
-config.bind(' dl', 'hint links spawn tmux new-window -n Download "youtube-dl \'{hint-url}\'"')
-config.bind(' dm', 'hint links spawn tmux new-window -n Download "youtube-dl -x -o \'~/Sync/music/%(title)s.(ext)s\' \'{hint-url}\'"')
+config.bind(
+    ' dl',
+    'hint links spawn tmux new-window -n Download "youtube-dl \'{hint-url}\'"')
+config.bind(
+    ' dm',
+    'hint links spawn tmux new-window -n Download "youtube-dl -x -o \'~/Sync/music/%(title)s.(ext)s\' \'{hint-url}\'"'
+)
 config.bind(' fd', 'set-cmd-text -s :quickmark-load')
 # mpv
-c.aliases['mpv'] = 'spawn --userscript ~/.config/qutebrowser/scripts/view_in_mpv'
+c.aliases[
+    'mpv'] = 'spawn --userscript ~/.config/qutebrowser/scripts/view_in_mpv'
 config.bind(' pl', 'hint links spawn go-mpv {hint-url}')
 config.bind(' pp', 'mpv')
 
 # config.bind(' <Tab>', 'tab-focus last')
 config.unbind('d')
 config.bind('q', 'tab-close')
-config.bind('<ctrl-q>' , 'record-macro')
+config.bind('<ctrl-q>', 'record-macro')
 config.bind(' rr', 'config-source ;; message-info "reloaded!')
 config.bind('<', 'tab-move -')
 config.bind('<ctrl+g>', '<Escape>')
@@ -186,7 +206,7 @@ config.bind('i', 'hint inputs')
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('ya', 'hint links yank')
 config.bind('gh', 'home')
-config.bind('<ctrl+e>','scroll-page 0 0.3')
+config.bind('<ctrl+e>', 'scroll-page 0 0.3')
 
 # org capture
 c.aliases['org'] = 'spawn --userscript ~/.config/qutebrowser/scripts/org'
@@ -204,14 +224,16 @@ config.bind('<ctrl+g>', 'leave-mode', mode='command')
 # insert mode binding
 config.bind('<ctrl+p>', 'fake-key <Up>', mode='insert')
 config.bind('<ctrl+n>', 'fake-key <Down>', mode='insert')
-config.bind('<ctrl+g>', 'leave-mode' ,mode='insert')
+config.bind('<ctrl+g>', 'leave-mode', mode='insert')
 config.bind('<ctrl+a>', 'fake-key <Home>', mode='insert')
 config.bind('<ctrl+e>', 'fake-key <End>', mode='insert')
 config.bind('<ctrl+f>', 'fake-key <Right>', mode='insert')
 config.bind('<ctrl+b>', 'fake-key <Left>', mode='insert')
 config.bind('<ctrl+d>', 'fake-key <Delete>', mode='insert')
-config.bind('<ctrl+k>', 'fake-key <Shift-End> ;; fake-key <Delete>', mode='insert')
-config.bind('<ctrl+u>', 'fake-key <Shift-Home> ;; fake-key <Delete>', mode='insert')
+config.bind(
+    '<ctrl+k>', 'fake-key <Shift-End> ;; fake-key <Delete>', mode='insert')
+config.bind(
+    '<ctrl+u>', 'fake-key <Shift-Home> ;; fake-key <Delete>', mode='insert')
 config.bind('<alt+f>', 'fake-key <Ctrl-Right>', mode='insert')
 config.bind('<alt+b>', 'fake-key <Ctrl-Left>', mode='insert')
 config.bind('<alt+d>', 'fake-key <Ctrl-Delete>', mode='insert')
@@ -220,4 +242,5 @@ config.bind('<alt+d>', 'fake-key <Ctrl-Delete>', mode='insert')
 # config.bind('<Return>','fake-key 0', mode='hint')
 
 # emacs
-config.bind('<Alt-w>','yank selection')
+config.bind('<Alt-w>', 'yank selection')
+config.bind('<Alt+v>', 'scroll-page 0 -0.3')
