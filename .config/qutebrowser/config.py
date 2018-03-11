@@ -55,7 +55,7 @@ c.hints.scatter = True
 c.hints.uppercase = False
 c.history_gap_interval = 30
 c.input.forward_unbound_keys = 'all'
-# c.input.insert_mode.auto_enter = False
+c.input.insert_mode.auto_enter = True
 c.input.insert_mode.auto_leave = True
 c.input.insert_mode.auto_load = False
 c.input.insert_mode.plugins = False
@@ -90,7 +90,7 @@ c.tabs.new_position.related = 'next'
 c.tabs.new_position.unrelated = 'last'
 c.tabs.padding = {'top': 0, 'bottom': 0, 'left': 5, 'right': 5}
 c.tabs.position = 'top'
-c.tabs.select_on_remove = 'next'
+c.tabs.select_on_remove = 'last-used'
 c.tabs.show = 'always'
 c.tabs.show_switching_delay = 800
 c.tabs.tabs_are_windows = False
@@ -220,6 +220,14 @@ config.bind('<alt+p>', 'command-history-prev', mode='command')
 config.bind('<ctrl+n>', 'completion-item-focus next', mode='command')
 config.bind('<ctrl+p>', 'completion-item-focus prev', mode='command')
 config.bind('<ctrl+g>', 'leave-mode', mode='command')
+
+# proxy toggle
+config.bind('<alt+a>',
+            'set content.proxy "http://127.0.0.1:3128" ;; message-info "Proxy Mode: Auto"')
+config.bind('<alt+d>',
+            'set content.proxy "socks5://127.0.0.1:1080" ;; message-info "Proxy Mode: Proxy"')
+config.bind('<alt+k>',
+            'config-unset content.proxy ;; message-info "Proxy Disabled"')
 
 # insert mode binding
 config.bind('<ctrl+p>', 'fake-key <Up>', mode='insert')
