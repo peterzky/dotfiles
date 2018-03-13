@@ -2,6 +2,7 @@
 if [ -n "${commands[fzf-share]}" ]; then
   source "$(fzf-share)/key-bindings.zsh"
 fi
+export EDITOR='editor'
 
 alias emt='emacsclient -nc'
 alias emc='emacsclient -nw'
