@@ -6,7 +6,7 @@ nixos options https://nixos.org/nixos/options.html#
 nixos github https://github.com/NixOS/nixpkgs
 github peterzky https://github.com/peterzky
 torrent 1337x http://1337x.to/home/
-flat color http://bootflat.github.io/color-picker.html
+flat color https://flatuicolors.com/
 nixos wiki https://nixos.wiki/wiki/Main_Page
 regex https://regex101.com/
 qutebrowser https://github.com/qutebrowser/qutebrowser
@@ -17,4 +17,4 @@ torrent piratebay https://thepiratebay.org/
 baidu https://www.baidu.com/
 jd https://www.jd.com/
 taobao https://www.taobao.com/
-lingvist english https://learn.lingvist.com/?page=account#account?
+lingvist https://learn.lingvist.com/?page=account#account?
