@@ -85,7 +85,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi fcitx date battery powermenu
+modules-right = pomodoro filesystem volume cpu memory temp-laptop fcitx wifi date battery powermenu
 dpi = 110
 
 ; override-redirect = true
@@ -97,7 +97,7 @@ inherit = main
 monitor = DP-4
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temperature lan fcitx date powermenu
+modules-right = pomodoro filesystem volume cpu memory temperature fcitx lan date powermenu
 
 [bar/left]
 inherit = main
