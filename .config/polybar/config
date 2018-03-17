@@ -85,7 +85,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi date battery powermenu
+modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi fcitx date battery powermenu
 dpi = 110
 
 ; override-redirect = true
@@ -97,7 +97,7 @@ inherit = main
 monitor = DP-4
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temperature lan date powermenu
+modules-right = pomodoro filesystem volume cpu memory temperature lan fcitx date powermenu
 
 [bar/left]
 inherit = main
@@ -118,6 +118,14 @@ type = custom/script
 interval = 1
 exec-if = test -S /tmp/emacs1000/server
 exec =  emacsclient -e '(polybar-pomodoro)' | tr -d '"' | sed 's/\[/[%{F#C0392B}/g ; s/\]/%{F-}]/g ; s/(/%{F#E2B13C}/g ; s/)/%{F-}/g'
+
+[module/fcitx]
+type = custom/script
+interval = 1
+exec = /home/peterzky/.config/bspwm/scripts/iem.sh
+format-underline = #E2B13C
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
 
 [module/xwindow]
 type = internal/xwindow
