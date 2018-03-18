@@ -63,6 +63,6 @@ wmname LG3D
 xsetroot -cursor_name left_ptr
 xcape -e "Caps_Lock=Escape" &
 compton -b &
-udiskie -a -t -n -F &
+udiskie -a -n -F &
 unclutter &
 emacs --daemon &
