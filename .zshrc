@@ -27,6 +27,11 @@ ws-clear() {
     echo "all cleared!"
 }
 
+rime-sync() {
+    cd $HOME/.config/fcitx/rime/
+    rime_dict_manager -s
+}
+
 clear-cache() {
     find ~/.cache -type f -atime +1 -print -delete
     find ~/.cache -type f -size 2M -print -delete
