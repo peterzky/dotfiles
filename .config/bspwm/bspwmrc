@@ -48,6 +48,7 @@ bspc rule -a Kupfer.py	          focus=on
 bspc rule -a Screenkey	          manage=off
 bspc rule -a Gnuplot	          state=floating
 bspc rule -a Octave	          state=floating
+bspc rule -a rambox               state=floating
 bspc rule -a Octave-gui	          state=floating
 bspc rule -a mpv	          state=floating
 bspc rule -a feh	          state=floating
