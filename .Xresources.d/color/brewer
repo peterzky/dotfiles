@@ -1,7 +1,7 @@
 ! special
-*.foreground:   #b7b8b9
-*.background:   #0c0d0e
-*.cursorColor:  #b7b8b9
+URxvt.foreground:   #b7b8b9
+URxvt.background:   [80]#0c0d0e
+URxvt.cursorColor:  #b7b8b9
 
 ! black
 *.color0:       #0c0d0e

@@ -34,7 +34,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Iosevka:pixelsize=11;1
+font-0 = Sarasa UI SC:pixelsize=10;1
 font-1 = Nerd Font:pixelsize=12;1
 font-2 = Material Icons:pixelsize=13;4
 font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
@@ -71,7 +71,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Iosevka:pixelsize=11;1
+font-0 = Sarasa UI SC:pixelsize=10;1
 font-1 = Nerd Font:pixelsize=12;1
 font-2 = Material Icons:pixelsize=13;4
 font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
@@ -82,7 +82,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi date battery powermenu
+modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi date battery
 dpi = 110
 tray-position = right
 tray-padding = 2
@@ -94,7 +94,7 @@ inherit = main
 monitor = DP-4
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temperature lan date powermenu
+modules-right = pomodoro filesystem volume cpu memory temperature lan date
 tray-position = right
 tray-padding = 2
 tray-transparent = false

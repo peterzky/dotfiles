@@ -3,10 +3,10 @@ import platform
 # machine independent settings
 if platform.node() == "thinkpad":
     c.zoom.default = '125%'
-    fontsize = '12'
+    fontsize = '11'
 else:
     c.zoom.default = '100%'
-    fontsize = '11'
+    fontsize = '10'
 # qt settings
 c.qt.args = ["--autoplay-policy=user-gesture-required"]
 
@@ -28,18 +28,18 @@ c.confirm_quit = ['never']
 c.content.proxy = 'http://127.0.0.1:3128'
 
 c.editor.command = ['emacsclient', '-nc', '{file}']
-c.fonts.completion.category = 'bold ' + fontsize + 'pt "Iosevka"'
-c.fonts.completion.entry = fontsize + 'pt "Iosevka"'
-c.fonts.debug_console = fontsize + 'pt "Iosevka"'
-c.fonts.downloads = fontsize + 'pt "Iosevka"'
-c.fonts.hints = 'bold ' + fontsize + 'pt "Iosevka"'
-c.fonts.keyhint = fontsize + 'pt "Iosevka"'
-c.fonts.messages.error = fontsize + 'pt "Iosevka"'
-c.fonts.messages.info = fontsize + 'pt "Iosevka"'
-c.fonts.messages.warning = fontsize + 'pt "Iosevka"'
-c.fonts.prompts = fontsize + 'pt "Iosevka"'
-c.fonts.statusbar = fontsize + 'pt "Iosevka"'
-c.fonts.tabs = 'bold ' + fontsize + 'pt "Iosevka"'
+c.fonts.completion.category = 'bold ' + fontsize + 'pt "Sarasa UI SC"'
+c.fonts.completion.entry = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.debug_console = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.downloads = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.hints = 'bold ' + fontsize + 'pt "Sarasa UI SC"'
+c.fonts.keyhint = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.messages.error = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.messages.info = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.messages.warning = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.prompts = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.statusbar = fontsize + 'pt "Sarasa UI SC"'
+c.fonts.tabs = 'bold ' + fontsize + 'pt "Sarasa UI SC"'
 c.hints.hide_unmatched_rapid_hints = True
 c.hints.min_chars = 1
 c.hints.mode = 'number'
@@ -130,9 +130,9 @@ c.colors.statusbar.url.warn.fg = "#914E89"
 c.colors.statusbar.url.hover.fg = "#2B7694"
 c.colors.tabs.bar.bg = "#222222"
 c.colors.tabs.even.fg = "#222222"
-c.colors.tabs.even.bg = "#899CA1"
 c.colors.tabs.odd.fg = "#222222"
-c.colors.tabs.odd.bg = "#899CA1"
+c.colors.tabs.even.bg = "#ecf0f1"
+c.colors.tabs.odd.bg = "#ecf0f1"
 c.colors.tabs.selected.even.fg = "white"
 c.colors.tabs.selected.even.bg = "#222222"
 c.colors.tabs.selected.odd.fg = "white"

@@ -54,7 +54,7 @@ XF86Audio{Next,Prev}
 
 # terminal emulator
 super + shift + Return
-	alacritty
+	urxvtc
 
 # program launcher
 super + @space
