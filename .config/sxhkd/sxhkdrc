@@ -21,8 +21,11 @@ super + i
 
 super + w
       xdotool search --onlyvisible --classname dropdown windowunmap \
-      || xdotool search --classname dropdown windowmap \
-      || urxvtc -name dropdown -e zsh -c "tmux has -t dropdown && exec tmux attach-session -d -t dropdown || exec tmux new-session -s dropdown"
+      || (xdotool search --classname dropdown windowmap; \
+      xdotool search --classname dropdown windowraise; ) \
+      || (urxvtc -name dropdown -e zsh -c \
+      "tmux has -t dropdown && exec tmux attach-session -d -t dropdown || exec tmux new-session -s dropdown"; \
+      xdotool search --classname dropdown windowraise;)
 
 super + e; v
       ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "pamix"
