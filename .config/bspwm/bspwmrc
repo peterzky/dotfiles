@@ -13,6 +13,7 @@ if [[ $(hostname) == 'nixos' ]]; then
     bspc config window_gap	    6
     rect=960x540+480+270
     dropdown=1900x530+5+22
+    sync_api='q4q6mjnPfKsgE79ASx43bbAxtYKeCTgK'
     polybar main  &
     polybar left  &
     polybar right &
@@ -73,3 +74,4 @@ autocutsel &
 udiskie -a -n -F &
 unclutter &
 emacs --daemon &
+syncthing-tray -api $sync_api &
