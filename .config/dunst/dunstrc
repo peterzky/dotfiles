@@ -1,6 +1,7 @@
 #;;; -*- mode: conf; mode: rainbow; eval: (reopen-as-yadm); -*-
 [global]
-font = Sarasa UI SC-11
+font = Sarasa UI SC-8
+# font = Hack-9
 frame_width = 0
 frame_color = "#000000"
 

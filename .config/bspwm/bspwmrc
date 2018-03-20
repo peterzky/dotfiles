@@ -12,6 +12,7 @@ if [[ $(hostname) == 'nixos' ]]; then
     bspc config border_width	    4
     bspc config window_gap	    6
     rect=960x540+480+270
+    dropdown=1900x530+5+22
     polybar main  &
     polybar left  &
     polybar right &
@@ -20,6 +21,7 @@ else
     bspc config border_width	    4
     bspc config window_gap	    6
     rect=960x540+480+270
+    dropdown=1900x530+5+22
     MONITOR=eDP-1 polybar thinkpad &
 fi
 
@@ -47,11 +49,13 @@ bspc rule -a Lxappearance         state=floating
 bspc rule -a Kupfer.py	          focus=on
 bspc rule -a Screenkey	          manage=off
 bspc rule -a Gnuplot	          state=floating
+bspc rule -a Fcitx-config-gtk3    state=floating
 bspc rule -a Octave	          state=floating
 bspc rule -a rambox               state=floating
 bspc rule -a Octave-gui	          state=floating
 bspc rule -a mpv	          state=floating
 bspc rule -a feh	          state=floating
+bspc rule -a URxvt:dropdown       state=floating    follow=on   rectangle=$dropdown
 bspc rule -a URxvt:volumeFloat    state=floating    follow=on   rectangle=$rect
 bspc rule -a URxvt:rangerFloat    state=floating    follow=on   rectangle=$rect
 bspc rule -a URxvt:htopFloat      state=floating    follow=on   rectangle=$rect
@@ -65,6 +69,7 @@ xsetroot -cursor_name left_ptr
 xcape -e "Caps_Lock=Escape" &
 urxvtd &
 compton -b &
+autocutsel &
 udiskie -a -n -F &
 unclutter &
 emacs --daemon &

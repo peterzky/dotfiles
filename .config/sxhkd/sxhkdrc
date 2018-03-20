@@ -16,6 +16,14 @@ super + ctrl + d
 button9
         dict -s
 
+super + i
+      ~/.config/bspwm/scripts/rambox.sh
+
+super + w
+      xdotool search --onlyvisible --classname dropdown windowunmap \
+      || xdotool search --classname dropdown windowmap \
+      || urxvtc -name dropdown -e zsh -c "tmux has -t dropdown && exec tmux attach-session -d -t dropdown || exec tmux new-session -s dropdown"
+
 super + e; v
       ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "pamix"
 
@@ -29,7 +37,7 @@ super + e; m
       ~/.config/bspwm/scripts/scratchpad.sh "musicFloat" "musicbox"
 
 super + e; {super + e,e,c,q,x}
-        {emacsclient -nc,emacsclient -nc,conkeror,qutebrowser,xournal}
+        {emacsclient -nc,emacsclient -nc,chromium,qutebrowser,xournal}
 
 # touchpad
 XF86Search
@@ -53,7 +61,7 @@ XF86Audio{Next,Prev}
       ~/.config/bspwm/scripts/AudioSwitch.sh {"speaker","headphone"}
 
 # terminal emulator
-super + shift + Return
+super + Return
 	urxvtc
 
 # program launcher
@@ -98,8 +106,8 @@ super + y
 	bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
 
 # swap the current node and the biggest node
-super + Return
-	bspc node -s biggest.local
+# super + Return
+# 	bspc node -s biggest.local
 
 #
 # state/flags

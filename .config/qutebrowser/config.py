@@ -3,10 +3,10 @@ import platform
 # machine independent settings
 if platform.node() == "thinkpad":
     c.zoom.default = '125%'
-    fontsize = '11'
+    fontsize = '13'
 else:
     c.zoom.default = '100%'
-    fontsize = '10'
+    fontsize = '12'
 # qt settings
 c.qt.args = ["--autoplay-policy=user-gesture-required"]
 
