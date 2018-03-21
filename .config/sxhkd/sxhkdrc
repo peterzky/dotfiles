@@ -57,10 +57,10 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-# XF86Audio{Next,Prev,Stop,Play}
-# 	mpc {next,prev,stop,toggle}
+XF86Audio{Next,Prev,Play}
+	echo {"next","prev","play"} > /tmp/musicbox.fifo
 
-XF86Audio{Next,Prev}
+super +XF86Audio{Next,Prev}
       ~/.config/bspwm/scripts/AudioSwitch.sh {"speaker","headphone"}
 
 # terminal emulator
