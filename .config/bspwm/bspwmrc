@@ -12,7 +12,7 @@ if [[ $(hostname) == 'nixos' ]]; then
     bspc config border_width	    4
     bspc config window_gap	    6
     rect=960x540+480+270
-    dropdown=1900x530+5+22
+    dropdown=1920x530+0+20
     sync_api='q4q6mjnPfKsgE79ASx43bbAxtYKeCTgK'
     polybar main  &
     polybar left  &
@@ -22,7 +22,7 @@ else
     bspc config border_width	    4
     bspc config window_gap	    6
     rect=960x540+480+270
-    dropdown=1900x530+5+22
+    dropdown=1920x530+0+20
     sync_api='TpD3z5RWDsoDPjyQDzLkZHHQw3TLjUGw'
     MONITOR=eDP-1 polybar thinkpad &
 fi
@@ -50,6 +50,7 @@ bspc rule -a Xournal	          desktop='focused:^8' state=floating follow=on
 bspc rule -a Lxappearance         state=floating
 bspc rule -a Kupfer.py	          focus=on
 bspc rule -a Screenkey	          manage=off
+bspc rule -a Steam                state=floating
 bspc rule -a Gnuplot	          state=floating
 bspc rule -a Fcitx-config-gtk3    state=floating
 bspc rule -a Octave	          state=floating
