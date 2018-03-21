@@ -3,7 +3,7 @@ import platform
 # machine independent settings
 if platform.node() == "thinkpad":
     c.zoom.default = '125%'
-    fontsize = '13'
+    fontsize = '12'
 else:
     c.zoom.default = '100%'
     fontsize = '12'

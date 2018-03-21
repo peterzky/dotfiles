@@ -3,4 +3,4 @@
 
 Emacs.font: Hack-11
 
-URxvt.font: xft:Sarasa Term SC:pixelsize=17, xft:Iosevka:size=13, xft:Nerd Font:size=13
+URxvt.font: xft:Sarasa Term SC:pixelsize=18, xft:Iosevka:size=13, xft:Nerd Font:size=13
