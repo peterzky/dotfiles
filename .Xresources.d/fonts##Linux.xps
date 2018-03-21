@@ -1,6 +1,0 @@
-! Xft.dpi: 190
-! Xcursor.size: 48
-
-Emacs.font: Hack-12
-
-URxvt.font: xft:Sarasa Term SC:pixelsize=15, xft:Iosevka:size=13, xft:Nerd Font:size=13
