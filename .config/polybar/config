@@ -189,17 +189,17 @@ label-empty =
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
-label-monocle = M
-label-tiled = " "
+; label-monocle = " M "
+; label-tiled = " # "
 label-tiled-foreground = #91B496
-label-fullscreen = " "
-label-floating = " "
-label-pseudotiled = " "
-label-locked = " "
+label-fullscreen = "  "
+label-floating = "  "
+label-pseudotiled = "  "
+label-locked = "  "
 label-locked-foreground = #bd2c40
-label-sticky = " "
+label-sticky = "  "
 label-sticky-foreground = #f5d76e
-label-private = " "
+label-private = "  "
 label-private-foreground = #bd2c40
 
 [module/mpd]

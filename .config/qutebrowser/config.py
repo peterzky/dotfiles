@@ -205,7 +205,7 @@ config.bind('K', 'tab-next')
 config.bind('i', 'hint inputs')
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('ya', 'hint links yank-primary')
-config.bind('ym', 'hint magnet yank-primary')
+config.bind(';m', 'hint magnet yank-primary')
 config.bind('gh', 'home')
 config.bind('<ctrl+e>', 'scroll-page 0 0.3')
 
