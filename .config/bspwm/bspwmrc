@@ -50,6 +50,7 @@ bspc rule -a Xournal	          desktop='focused:^8' state=floating follow=on
 bspc rule -a Lxappearance         state=floating
 bspc rule -a Kupfer.py	          focus=on
 bspc rule -a Screenkey	          manage=off
+bspc rule -a Civ6                 desktop='focused:^5' state=fullscreen border=off
 bspc rule -a Steam                state=floating
 bspc rule -a Klavaro              state=floating
 bspc rule -a Artha                state=floating
