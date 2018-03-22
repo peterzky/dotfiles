@@ -197,7 +197,6 @@ config.bind('q', 'tab-close')
 config.bind('<ctrl-q>', 'record-macro')
 config.bind(' rr', 'config-source ;; message-info "reloaded!')
 config.bind('<', 'tab-move -')
-config.bind('<ctrl+g>', '<Escape>')
 config.bind('<meta+x>', 'set-cmd-text :')
 config.bind('>', 'tab-move +')
 config.bind('J', 'tab-prev')
@@ -220,7 +219,7 @@ config.bind('<alt+n>', 'command-history-next', mode='command')
 config.bind('<alt+p>', 'command-history-prev', mode='command')
 config.bind('<ctrl+n>', 'completion-item-focus next', mode='command')
 config.bind('<ctrl+p>', 'completion-item-focus prev', mode='command')
-config.bind('<ctrl+g>', 'leave-mode', mode='command')
+config.bind('<ctrl+g>', 'leave-mode;;spawn fcitx-remote -c', mode='command')
 
 # proxy toggle
 config.bind('<alt+a>',

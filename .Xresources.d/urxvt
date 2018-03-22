@@ -19,11 +19,11 @@ URxvt.keysym.M-u: perl:url-select:select_next
 ! URxvt.keysym.M-w: perl:clipboard:copy
 ! URxvt.keysym.M-c:   perl:clipboard:copy
 ! URxvt.keysym.M-v:   perl:clipboard:paste
-URxvt.clipboard.copycmd:  xclip -i -selection clipboard
-URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+! URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+! URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 
 ! URxvt.keysym.M-y: perl:clipboard:paste
-URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.launcher: qutebrowser
 URxvt.url-select.underline: true
 URxvt.tabbed.autohide: true
 URxvt.tabbed.tab-title: title

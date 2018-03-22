@@ -63,7 +63,7 @@ bspc rule -a rambox               state=floating
 bspc rule -a Octave-gui	          state=floating
 bspc rule -a mpv	          state=floating
 bspc rule -a feh	          state=floating
-bspc rule -a URxvt:dropdown       state=floating    follow=on   rectangle=$dropdown border=off
+bspc rule -a URxvt:dropdown       state=floating    follow=on   rectangle=$dropdown border=off sticky=on
 bspc rule -a URxvt:volumeFloat    state=floating    follow=on   rectangle=$rect
 bspc rule -a URxvt:rangerFloat    state=floating    follow=on   rectangle=$rect
 bspc rule -a URxvt:htopFloat      state=floating    follow=on   rectangle=$rect
