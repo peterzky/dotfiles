@@ -41,6 +41,7 @@ font-3 = unifont:fontformat=truetype:size=12:antialias=false;1
 font-4 = siji:pixelsize=11;1
 font-5 = FontAwesome:pixelsize=11;2
 
+enable-ipc = true
 
 ; tray-background = #0063ff
 

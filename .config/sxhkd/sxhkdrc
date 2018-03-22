@@ -10,6 +10,10 @@ super + {_, ctrl} + c
 button8
       tts -sel
 
+# screenshot
+Print
+      ~/.config/bspwm/scripts/ScreenShot.sh
+
 # dict
 super + ctrl + d
         dict -s
@@ -18,6 +22,9 @@ button9
 
 super + i
       ~/.config/bspwm/scripts/rambox.sh
+
+super + v
+      ~/.config/bspwm/scripts/BarToggle.sh
 
 super + w
       xdotool search --onlyvisible --classname dropdown windowunmap \

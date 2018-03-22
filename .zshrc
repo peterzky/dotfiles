@@ -4,8 +4,9 @@ if [ -n "${commands[fzf-share]}" ]; then
 fi
 export EDITOR='editor'
 
-alias emt='emacsclient -nc'
-alias emc='emacsclient -nw'
+alias e='emacsclient -n'
+alias emc='emacsclient -nc'
+alias emt='emacsclient -nw'
 alias proxy='http_proxy="http://127.0.0.1:8123" https_proxy="http://127.0.0.1:8123"'
 alias yd='youtube-dl --ignore-config \
 		     --proxy "socks5://127.0.0.1:1080"'
@@ -13,7 +14,7 @@ alias nixproxy='NIX_CURL_FLAGS="http://127.0.0.1:8123"'
 
 alias ydm='youtube-dl --ignore-config \
 		      -x \
-		      --proxy "socks5://127.0.0.1:8123"'
+		      --proxy "socks5://127.0.0.1:1080"'
 
 alias tm="tmux attach || tmux new"
 alias tn="tmux new"

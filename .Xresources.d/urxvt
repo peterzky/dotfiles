@@ -12,15 +12,15 @@ URxvt.scrollTtyOutput:   false
 URxvt.scrollWithBuffer:  true
 URxvt.scrollTtyKeypress: true
 
-URxvt.perl-ext-common: default,matcher,keyboard-select,url-select,clipboard
+URxvt.perl-ext-common: default,matcher,keyboard-select,url-select,clipboard,font-size
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-u: perl:url-select:select_next
 ! URxvt.keysym.M-w: perl:clipboard:copy
 ! URxvt.keysym.M-c:   perl:clipboard:copy
 ! URxvt.keysym.M-v:   perl:clipboard:paste
-! URxvt.clipboard.copycmd:  xclip -i -selection clipboard
-! URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 
 ! URxvt.keysym.M-y: perl:clipboard:paste
 URxvt.url-select.launcher: /usr/bin/xdg-open
@@ -29,6 +29,12 @@ URxvt.tabbed.autohide: true
 URxvt.tabbed.tab-title: title
 URxvt.matcher.button: 1
 URxvt.preeditType: OverTheSpot
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
 
 ! Scroll
 URxvt.keysym.M-v: command:\033]720;1\007
