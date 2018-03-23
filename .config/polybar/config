@@ -88,7 +88,7 @@ dpi = 110
 tray-position = right
 tray-padding = 2
 tray-transparent = false
-
+enable-ipc = true
 
 [bar/main]
 inherit = main
