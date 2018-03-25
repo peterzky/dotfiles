@@ -74,8 +74,12 @@ super +XF86Audio{Next,Prev}
 super + Return
 	urxvtc
 
+# emacsclient
+super + shift + Retrun
+        emacsclient -nc
+
 # program launcher
-super + @space
+super + space
 	rofi -show run
 
 # super + w
