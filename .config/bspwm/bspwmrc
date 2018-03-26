@@ -47,14 +47,13 @@ bspc rule -a krita	          desktop='focused:^8' state=floating follow=on
 bspc rule -a "VirtualBox Manager" desktop='focused:^8' state=floating follow=on
 bspc rule -a "VirtualBox Machine" desktop='focused:^8' state=floating follow=on
 bspc rule -a Xournal	          desktop='focused:^8' state=floating follow=on
-bspc rule -a Lxappearance         state=floating
 bspc rule -a Kupfer.py	          focus=on
 bspc rule -a Screenkey	          manage=off
 bspc rule -a Zathura:*            state=tiled  focus=on
-# bspc rule -a Civ6                 state=fullscreen border=off
+bspc rule -a Lxappearance         state=floating
 bspc rule -a Sxiv                 state=floating
 bspc rule -a Steam                state=floating
-bspc rule -a Klavaro              state=floating
+bspc rule -a Firefox:Places       state=floating
 bspc rule -a Artha                state=floating
 bspc rule -a Gnuplot	          state=floating
 bspc rule -a Fcitx-config-gtk3    state=floating
