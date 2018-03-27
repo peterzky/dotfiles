@@ -75,7 +75,7 @@ super + Return
 	urxvtc
 
 # emacsclient
-super + shift + Retrun
+super + shift + Return
         emacsclient -nc
 
 # program launcher

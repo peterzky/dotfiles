@@ -1,5 +1,6 @@
 // -*- eval: (reopen-as-yadm); -*-
-mapkey('<Ctrl-f>','open hint with mpv-server',mpv);
+mapkey('<Space>pl','open hint with mpv',mpv);
+mapkey('<Space>dl','open hint with youtube-dl',youtube);
 
 unmap('<Ctrl-i>');
 unmap('q');
@@ -40,8 +41,19 @@ function mpv() {
     Hints.create ('*[href]',function(element) {
 	var link = element.href;
 	var xhr = new XMLHttpRequest();
-	var data = JSON.stringify({"Url": link,"Method":"play"});
-	xhr.open("POST","http://127.0.0.1:3111/video/add/",true);
+	var data = JSON.stringify({"Url": link });
+	xhr.open("POST","http://127.0.0.1:3111/mpv/",true);
+	xhr.setRequestHeader("Content-type","application/json");
+	xhr.send(data);
+    }
+)}
+
+function youtube() {
+    Hints.create ('*[href]',function(element) {
+	var link = element.href;
+	var xhr = new XMLHttpRequest();
+	var data = JSON.stringify({"Url": link });
+	xhr.open("POST","http://127.0.0.1:3111/youtube-dl/",true);
 	xhr.setRequestHeader("Content-type","application/json");
 	xhr.send(data);
     }
