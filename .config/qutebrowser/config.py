@@ -6,7 +6,7 @@ if platform.node() == "thinkpad":
     fontsize = '12'
 else:
     c.zoom.default = '100%'
-    fontsize = '12'
+    fontsize = '10'
 # qt settings
 c.qt.args = ["--autoplay-policy=user-gesture-required"]
 
