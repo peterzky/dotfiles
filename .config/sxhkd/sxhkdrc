@@ -35,7 +35,7 @@ super + w
       xdotool search --classname dropdown windowraise;)
 
 super + e; v
-      ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "pamix"
+      ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "ncpamixer"
 
 super + e; h
       ~/.config/bspwm/scripts/scratchpad.sh "htopFloat" "htop"
