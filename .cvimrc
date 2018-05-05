@@ -7,19 +7,11 @@ set numerichints
 set autohidecursor
 set typelinkhints
 set noautofocus
-set smoothscroll
+set nosmoothscroll
 set cncpcompletion
-let searchalias wiki = "wikipedia"
 let mapleader = "\<Space>"
 map q closeTab
-let @@inoreader = 'http://www.inoreader.com/web_pages'
-let @@reddit_emacs = 'https://www.reddit.com/r/emacs/'
-let @@reddit_arch = 'https://www.reddit.com/r/archlinux/'
-let @@reddit_unix = 'https://www.reddit.com/r/unixporn/'
-map <leader>pp :tabnew @@inoreader<CR>
-map <leader>re :tabnew @@reddit_emacs<CR>
-map <leader>ra :tabnew @@reddit_arch<CR>
-map <leader>ru :tabnew @@reddit_unix<CR>
+
 map <leader>1 :execute 1%<CR>
 map <leader>2 :execute 2%<CR>
 map <leader>3 :execute 3%<CR>
@@ -50,53 +42,32 @@ imap <C-k> deleteToEnd
 imap <A-f> forwardWord
 imap <A-b> backwardWord
 imap <A-d> deleteWord
+
 mpvLink(link) -> {{
-  var enclink = encodeURIComponent(link.href);
-  httpRequest({url: 'http://127.0.0.1:3111'+ '/play/' + enclink, json: false},
-            function(res) { Status.setMessage(res); });
+   var xhr = new XMLHttpRequest();
+   var data = JSON.stringify({"Url": link.href});
+   xhr.open("POST","http://127.0.0.1:3111/mpv/",true);
+   xhr.setRequestHeader("Content-type","application/json");
+   xhr.send(data);
 }}
 mpv() -> {{
-  var link = location.href.toString();
-  var enclink = encodeURIComponent(link);
-  httpRequest({url: 'http://127.0.0.1:3111'+ '/play/' + enclink, json: false},
-            function(res) { Status.setMessage(res); });
+   var xhr = new XMLHttpRequest();
+   var data = JSON.stringify({"Url": location.href.toString()});
+   xhr.open("POST","http://127.0.0.1:3111/mpv/",true);
+   xhr.setRequestHeader("Content-type","application/json");
+   xhr.send(data);
 }}
 downloadLink(link) -> {{
-  var enclink = encodeURIComponent(link.href);
-  httpRequest({url: 'http://127.0.0.1:3111'+ '/download/' + enclink, json: false},
-            function(res) { Status.setMessage(res); });
+  var xhr = new XMLHttpRequest();
+  var data = JSON.stringify({"Url": link.href });
+  xhr.open("POST","http://127.0.0.1:3111/youtube-dl/",true);
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.send(data);
 }}
-map <C-d> createScriptHint(downloadLink)
-map gv :call mpv<CR>
-map <C-f> createScriptHint(mpvLink)
+map <Leader>dl createScriptHint(downloadLink)
+map <Leader>pp :call mpv<CR>
+map <Leader>pl createScriptHint(mpvLink)
 map <Leader>fs :call inoreader<CR>
-inoreader() -> {{
-function p(a, w, h) {
-  var b = window.screenLeft != undefined ? window.screenLeft : screen.left;
-  var c = window.screenTop != undefined ? window.screenTop : screen.top;
-  width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ?
-    document.documentElement.clientWidth : screen.width;
-  height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ?
-    document.documentElement.clientHeight : screen.height;
-  var d = ((width / 2) - (w / 2)) + b;
-  var e = ((height / 2) - (h / 2)) + c;
-  var f = window.open(a, new Date()
-    .getTime(), 'width=' + w + ', height=' + h + ', top=' + e + ', left=' + d +
-    'location=yes,resizable=yes,status=no,scrollbars=no,personalbar=no,toolbar=no,menubar=no'
-  );
-  if (window.focus) {
-    f.focus()
-  }
-}
-p('http://www.inoreader.com/bookmarklet/save_web_page/' + encodeURIComponent(
-  location.href), 640, 400);
-}}
-let searchengine arch = "https://wiki.archlinux.org/index.php?search=%s"
-let searchengine git  = "https://github.com/search?utf8=%E2%9C%93&q=%s"
-let searchengine jd   = "http://search.jd.com/Search?keyword=%s"
-let searchengine yd   = "http://dict.youdao.com/search?q=%s"
-let searchengine bd   = "http://www.baidu.com/baidu?wd=%s"
-let searchengine aur  = "https://aur.archlinux.org/packages/?K=%s"
 let nextmatchpattern="\s*下一页|下一頁|下一章|下一张|下一篇|下页|后页\s*,^\bnext\b,\\bnext\\b,^>$,^(>>|)$,^(>|),(>|)$,\\bmore\\b"
 let previousmatchpattern="\s*上一页|上一頁|上一章|上一张|上一篇|上页|前页\s*,^\bprev|previous\b,\\bprev|previous\\b,^<$,^(<<|)$,^(<|),(<|)$"
 let blacklists = ["https://www.shanbay.com/*","https://www.inoreader.com/*","http://www.keybr.com/*"]

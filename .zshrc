@@ -20,6 +20,11 @@ alias tm="tmux attach || tmux new"
 alias tn="tmux new"
 alias r="ranger-cd"
 
+# transmission
+alias tsmd='transmission-daemon'
+alias tsm='transmission-remote-cli'
+alias tsmk='pkill transmission-daemon'
+
 ws-clear() {
     local id=`uuidgen`
     mkdir -p .archive/$id/
@@ -27,6 +32,7 @@ ws-clear() {
     echo "save as" $id
     echo "all cleared!"
 }
+
 
 clear-cache() {
     find ~/.cache -type f -atime +1 -print -delete
