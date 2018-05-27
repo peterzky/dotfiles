@@ -47,7 +47,7 @@ super + e; m
       ~/.config/bspwm/scripts/scratchpad.sh "musicFloat" "musicbox"
 
 super + e; {super + e,e,c,q,x,f}
-        {emacsclient -nc,emacsclient -nc,chromium,qutebrowser,xournal,firefxo}
+        {emacsclient -nc,emacsclient -nc,chromium,qutebrowser,xournal,firefox}
 
 # touchpad
 XF86Search
@@ -64,10 +64,16 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-XF86Audio{Next,Prev,Play}
+# XF86Audio{Next,Prev,Play}
+# 	echo {"next","prev","play"} > /tmp/musicbox.fifo
+
+super + {Next,Prior,Pause}
 	echo {"next","prev","play"} > /tmp/musicbox.fifo
 
-super +XF86Audio{Next,Prev}
+# super +XF86Audio{Next,Prev}
+#       ~/.config/bspwm/scripts/AudioSwitch.sh {"speaker","headphone"}
+
+super + {Home,End}
       ~/.config/bspwm/scripts/AudioSwitch.sh {"speaker","headphone"}
 
 # terminal emulator
