@@ -1,7 +1,7 @@
 #;;; -*- mode: conf; eval: (reopen-as-yadm); -*-
-# backend = "xrender";
+backend = "xrender";
 # backend = "xr_glx_hybrid";
-backend = "glx"
+# backend = "glx"
 # paint-on-overlay = true;
 # glx-no-stencil = true;
 # glx-copy-from-front = true;
