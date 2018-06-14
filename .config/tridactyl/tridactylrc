@@ -1,0 +1,18 @@
+unbind d
+bind i focusinput -l
+bind w tabdetach
+bind gx1 tabonly
+bind K tabnext
+bind J tabprev
+bind q tabclose
+bind ;d hint -W exclaim_quiet tmux new-window -n download youtube-dl
+bind ;v hint -W exclaim_quiet tmux_mpv
+bind ;m hint -W exclaim_quiet transmission-remote -a
+bind ;o composite js "\"org-protocol://store-link?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
+bind ` fillcmdline buffer
+set hintfiltermode vimperator-reflow
+set hintchars 1234567890
+fixamo
+guiset hoverlink none
+# also set about:config browser.autofocus false
+set allowautofocus false
