@@ -15,5 +15,6 @@ set hintchars 1234567890
 fixamo
 guiset hoverlink none
 guiset navbar autohide
+guiset tabs autohide
 " also set about:config browser.autofocus false
 set allowautofocus false
