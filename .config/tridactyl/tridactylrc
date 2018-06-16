@@ -5,6 +5,8 @@ bind gx1 tabonly
 bind K tabnext
 bind J tabprev
 bind q tabclose
+bind < tabmove -1
+bind > tabmove +1
 bind ;d hint -W exclaim_quiet tmux new-window -n download youtube-dl
 bind ;v hint -W exclaim_quiet tmux_mpv
 bind ;m hint -W exclaim_quiet transmission-remote -a
