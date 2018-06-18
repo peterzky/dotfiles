@@ -49,6 +49,7 @@ bspc rule -a krita	          desktop='focused:^8' state=floating follow=on
 bspc rule -a "VirtualBox Manager" desktop='focused:^8' state=floating follow=on
 bspc rule -a "VirtualBox Machine" desktop='focused:^8' state=floating follow=on
 bspc rule -a Xournal	          desktop='focused:^8' state=floating follow=on
+bspc rule -a Matplotlib           state=floating
 bspc rule -a Kupfer.py	          focus=on
 bspc rule -a Screenkey	          manage=off
 bspc rule -a Zathura:*            state=tiled  focus=on
