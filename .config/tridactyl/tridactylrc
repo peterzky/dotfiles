@@ -16,7 +16,7 @@ set hintfiltermode vimperator-reflow
 set hintchars 1234567890
 fixamo
 guiset hoverlink none
-guiset navbar autohide
+guiset navbar always
 guiset tabs always
 " also set about:config browser.autofocus false
 set allowautofocus false
