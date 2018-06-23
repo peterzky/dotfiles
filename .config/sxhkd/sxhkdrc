@@ -85,8 +85,8 @@ super + shift + Return
         emacsclient -nc
 
 # program launcher
-super + space
-	rofi -show run
+# super + space
+# 	rofi -show run
 
 # super + w
 #         rofi -show window

@@ -79,7 +79,6 @@ bspc rule -a Emacs:org-agenda     state=floating    follow=on   rectangle=$rect
 $HOME/.fehbg
 wmname LG3D
 xsetroot -cursor_name left_ptr
-xcape -e "Caps_Lock=Escape" &
 urxvtd &
 compton -b &
 autocutsel &
@@ -87,3 +86,14 @@ udiskie -a -n -F &
 unclutter &
 emacs --daemon &
 syncthing-tray -api $sync_api &
+
+# Keyboard
+setxkbmap -option ''
+xmodmap -e 'clear lock'
+xmodmap -e 'clear control'
+xmodmap -e 'keycode 66 = Control_L'
+xmodmap -e 'keycode 36 = Control_R'
+xmodmap -e 'add control = Control_L Control_R'
+xmodmap -e 'keycode any = Return'
+xcape -e 'Control_R=Return'
+xcape -e 'Control_L=Escape'
