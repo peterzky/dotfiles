@@ -33,8 +33,9 @@ ws-clear() {
     echo "all cleared!"
 }
 
+
 backup() {
-    sudo mount -U 452eef84-ba13-4e5f-82e9-0027a4b40b4f -o remount,rw /home/peterzky/backup
+    sudo mount -U 452eef84-ba13-4e5f-82e9-0027a4b40b4f -o rw /home/peterzky/backup
     rsync -av --delete /home/peterzky/Sync /home/peterzky/backup/syncthing_backup
     sync
     sudo umount /home/peterzky/backup
