@@ -7,6 +7,7 @@ bind J tabprev
 bind q tabclose
 bind < tabmove -1
 bind > tabmove +1
+bind <A-x> fillcmdline
 bind ;d hint -W exclaim_quiet tmux new-window -n download youtube-dl
 bind ;v hint -W exclaim_quiet tmux_mpv
 bind ;m hint -W exclaim_quiet transmission-remote -a
