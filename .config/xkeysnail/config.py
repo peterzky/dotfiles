@@ -23,13 +23,10 @@ define_multipurpose_modmap(
 
 # Keybindings for Firefox/Chrome
 define_keymap(re.compile("Firefox|Google-chrome"), {
-    # Ctrl+Alt+j/k to switch next/previous tab
-    K("C-M-j"): K("C-TAB"),
-    K("C-M-k"): K("C-Shift-TAB"),
     # Type C-j to focus to the content
-    K("C-j"): K("C-f6"),
-    # very naive "Edit in editor" feature (just an example)
-    # K("C-o"): [K("C-a"), K("C-c"), launch(["gedit"]), sleep(0.5), K("C-v")]
+    K("C-j"): K("C-f6")
+    # K("C-c"): {
+    # }
 }, "Firefox and Chrome")
 
 # Keybindings for Zeal https://github.com/zealdocs/zeal/
@@ -101,5 +98,11 @@ define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt"), {
         K("C-g"): pass_through_key,
         # C-x u (undo)
         K("u"): [K("C-z"), set_mark(False)],
+    },
+    K("C-c"): {
+        K("c"): K("Super-c"),
+        K("a"): K("Super-z"),
+        # org store link only works in firefox
+        K("l"): [K("SEMICOLON"), K("o")]
     }
 }, "Emacs-like keys")
