@@ -1,11 +1,17 @@
 # -*- mode: conf; eval: (reopen-as-yadm); -*-
 
 # applications
+
+# org agenda
 super + z
      ~/.config/bspwm/scripts/org.sh
 
+# org capture
+super + c
+    ~/.local/bin/org-capture "org-protocol://capture?template=i"
+
 # tts
-super + {_, ctrl} + c
+super + {_, ctrl} + x
         {tts -sel ,tts -clip}
 button8
       tts -sel
@@ -26,7 +32,7 @@ super + i
 super + v
       ~/.config/bspwm/scripts/BarToggle.sh
 
-super + w
+alt + space
       xdotool search --onlyvisible --classname dropdown windowunmap \
       || (xdotool search --classname dropdown windowmap; \
       xdotool search --classname dropdown windowraise; ) \
@@ -67,7 +73,7 @@ XF86AudioMute
 # XF86Audio{Next,Prev,Play}
 # 	echo {"next","prev","play"} > /tmp/musicbox.fifo
 
-super + {Next,Prior,Pause}
+ctrl + {Next,Prior,Pause}
 	echo {"next","prev","play"} > /tmp/musicbox.fifo
 
 # super +XF86Audio{Next,Prev}
