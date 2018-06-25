@@ -47,6 +47,9 @@ fade-in-step = 0.03; # Opacity change between steps while fading in. (default 0.
 fade-out-step = 0.03; # Opacity change between steps while fading out. (default 0.03).
 # Opacity
 detect-client-opacity = true;
+
+frame-opacity = 0.4
+
 opacity-rule= ["90:class_g='fcitx'"];
 # Window type settings
 wintypes:
