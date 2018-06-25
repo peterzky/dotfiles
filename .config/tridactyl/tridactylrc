@@ -16,6 +16,8 @@ bind ` fillcmdline buffer
 set hintfiltermode vimperator-reflow
 set hintchars 1234567890
 fixamo
+
+set theme dark
 guiset hoverlink none
 guiset navbar always
 guiset tabs always

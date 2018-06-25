@@ -4,11 +4,17 @@
 
 # org agenda
 super + z
-     ~/.config/bspwm/scripts/org.sh
+      emacsclient -c -F '((name . "org-agenda") (alpha . (85 . 85)))' -e '(org-agenda-list 1)'
 
+# org agenda day view
+super + w
+     ~/.config/bspwm/scripts/org.sh
 # org capture
 super + c
     ~/.local/bin/org-capture "org-protocol://capture?template=i"
+
+super + r
+    rofi -show drun
 
 # tts
 super + {_, ctrl} + x
@@ -26,8 +32,8 @@ super + ctrl + d
 button9
         dict -s
 
-super + i
-      ~/.config/bspwm/scripts/rambox.sh
+# super + i
+#       ~/.config/bspwm/scripts/rambox.sh
 
 super + v
       ~/.config/bspwm/scripts/BarToggle.sh
