@@ -14,8 +14,9 @@ URxvt.scrollTtyKeypress: true
 
 URxvt.perl-ext-common: default,matcher,keyboard-select,url-select,clipboard,font-size
 URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-S-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keyboard-select.clipboard: true
 ! URxvt.keysym.M-w: perl:clipboard:copy
 ! URxvt.keysym.M-c:   perl:clipboard:copy
 ! URxvt.keysym.M-v:   perl:clipboard:paste
