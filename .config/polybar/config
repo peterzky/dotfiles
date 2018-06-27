@@ -83,7 +83,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temp-laptop wifi date battery
+modules-right = pomodoro nixos filesystem volume cpu memory temp-laptop wifi date battery
 dpi = 110
 tray-position = right
 tray-padding = 2
@@ -95,7 +95,7 @@ inherit = main
 monitor = DP-4
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro filesystem volume cpu memory temperature lan date
+modules-right = pomodoro nixos filesystem volume cpu memory temperature lan date
 tray-position = right
 tray-padding = 2
 tray-transparent = false
@@ -120,6 +120,13 @@ interval = 1
 exec-if = test -S /tmp/emacs1000/server
 exec =  emacsclient -e '(polybar-pomodoro)' | tr -d '"' | sed 's/\[/[%{F#C0392B}/g ; s/\]/%{F-}]/g ; s/(/%{F#E2B13C}/g ; s/)/%{F-}/g'
 
+
+[module/nixos]
+type = custom/script
+interval = 600
+exec-if = ping -q -c 1 -W 1 223.5.5.5 > /dev/null
+exec = curl -s 'https://howoldis.herokuapp.com/api/channels/' | jq '.[0].humantime' | sed 's/"/%{F#87D37C}/; s/"/%{F-}/'
+format-prefix = "nixpkgs: "
 
 [module/xwindow]
 type = internal/xwindow
