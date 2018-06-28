@@ -83,7 +83,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro nixos filesystem volume cpu memory temp-laptop wifi date battery
+modules-right = pomodoro nixos filesystem cpu memory temp-laptop wifi pulseaudio date battery
 dpi = 110
 tray-position = right
 tray-padding = 2
@@ -95,7 +95,7 @@ inherit = main
 monitor = DP-4
 modules-left = bspwm xwindow
 modules-center =
-modules-right = pomodoro nixos filesystem volume cpu memory temperature lan date
+modules-right = pomodoro nixos filesystem cpu memory temperature lan date pulseaudio
 tray-position = right
 tray-padding = 2
 tray-transparent = false
@@ -151,9 +151,8 @@ label-indicator-underline = ${colors.secondary}
 [module/filesystem]
 type = internal/fs
 interval = 25
-
+format-mounted-underline = #575fcf
 mount-0 = /
-
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %used%/%total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
@@ -304,7 +303,7 @@ interval = 3.0
 format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %{F#26a65b}%{F-} %downspeed% %{F#ec644b}%{F-} %upspeed%
+label-connected = %{F#26a65b}%{F-} %downspeed:7:7% %{F#ec644b}%{F-} %upspeed:7:7%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -328,6 +327,19 @@ format-underline = #0a6cf5
 
 label = %date% %time%
 
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
+format-volume-underline = #05c46b
+format-muted-underline = #ff4757
+format-volume = <ramp-volume> <label-volume>
+format-muted =  <label-muted>
+label-muted = muted
+label-muted-foreground = #666
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
 [module/volume]
 type = internal/volume
 
@@ -342,7 +354,6 @@ label-volume-foreground = ${root.foreground}
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = muted
-
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -410,8 +421,8 @@ format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label = %temperature%
-label-warn = %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
@@ -429,8 +440,8 @@ format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-label = %temperature%
-label-warn = %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
