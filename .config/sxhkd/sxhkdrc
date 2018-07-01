@@ -29,17 +29,12 @@ Print
 
 # dict
 super + ctrl + d
-        dict -s
-button9
-        dict -s
-
-# super + i
-#       ~/.config/bspwm/scripts/rambox.sh
+     ~/.config/bspwm/scripts/dict.sh
 
 super + v
       ~/.config/bspwm/scripts/BarToggle.sh
 
-alt + space
+super + space
       xdotool search --onlyvisible --classname dropdown windowunmap \
       || (xdotool search --classname dropdown windowmap; \
       xdotool search --classname dropdown windowraise; ) \
@@ -80,8 +75,8 @@ XF86AudioMute
 # XF86Audio{Next,Prev,Play}
 # 	echo {"next","prev","play"} > /tmp/musicbox.fifo
 
-ctrl + {Next,Prior,Pause}
-	echo {"next","prev","play"} > /tmp/musicbox.fifo
+ctrl + {Next,Prior}
+	~/.config/bspwm/scripts/MusicControl.sh {"next","prev"}
 
 # super +XF86Audio{Next,Prev}
 #       ~/.config/bspwm/scripts/AudioSwitch.sh {"speaker","headphone"}

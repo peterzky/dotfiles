@@ -4,9 +4,9 @@ if [ -n "${commands[fzf-share]}" ]; then
 fi
 export EDITOR='editor'
 
-alias e='emacsclient -n'
-alias emc='emacsclient -nc'
-alias emt='emacsclient -nw'
+alias e='emacsclient -nw'
+alias ec='emacsclient -nc'
+alias ee='emacsclient -n'
 alias proxy='http_proxy="http://127.0.0.1:8123" https_proxy="http://127.0.0.1:8123"'
 alias yd='youtube-dl --ignore-config \
 		     --proxy "socks5://127.0.0.1:1080"'
@@ -22,7 +22,7 @@ alias r="ranger-cd"
 
 # transmission
 alias tsmd='transmission-daemon'
-alias tsm='transmission-remote-cli'
+alias tsm='stig'
 alias tsmk='pkill transmission-daemon'
 
 ws-clear() {
