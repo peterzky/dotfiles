@@ -4,6 +4,8 @@ if [ -n "${commands[fzf-share]}" ]; then
 fi
 export EDITOR='editor'
 
+setopt histignorealldups
+
 alias e='emacsclient -nw'
 alias ec='emacsclient -nc'
 alias ee='emacsclient -n'
