@@ -12,8 +12,12 @@ Ypp=`echo $Y/$X*500 | bc -l | cut -d '.' -f1`
 Yp=`echo $Ypp+1 | bc`
 
 feh -g 500x$Yp+1350+50 \
-    --info 'echo "1:save  2:delete"' \
+    --info 'echo "1:save  2:delete  3:search"' \
+    --scale-down \
+    --auto-zoom \
     --no-screen-clip \
     --action1 "cp %F /home/peterzky/Sync/screenshot/%V.png;rm %F; notify-send 'screenshot saved!'" \
-    --action2 "rm %F; notify-send 'screenshot deleted!'" /tmp/screenshot.png \
+    --action2 "rm %F; notify-send 'screenshot deleted!'" \
+    --action3 "$HOME/.config/bspwm/scripts/imgsearch.py %F;rm %F; notify-send 'search image...'" \
+    /tmp/screenshot.png \
     || notify-send "not screenshot available"
