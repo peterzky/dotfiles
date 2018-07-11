@@ -56,6 +56,7 @@ bspc rule -a Zathura:*            state=tiled  focus=on
 bspc rule -a Lxappearance         state=floating
 bspc rule -a Anki                 state=floating
 bspc rule -a Klavaro              state=floating
+bspc rule -a ".klavaro-wrapped"   state=floating
 bspc rule -a copyq                state=floating
 bspc rule -a Sxiv                 state=floating
 bspc rule -a Steam                state=floating
