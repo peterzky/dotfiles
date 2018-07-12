@@ -13,8 +13,8 @@ super + w
 super + c
     ~/.local/bin/org-capture "org-protocol://capture?template=i"
 
-super + {r, grave}
-    rofi -show {drun, window}
+super + {r, grave, R}
+    rofi -show {drun, window, run}
 
 
 # tts
