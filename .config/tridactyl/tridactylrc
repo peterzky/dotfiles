@@ -1,4 +1,10 @@
 unbind d
+unbind s
+unbind <F1>
+bind d exclaim_quiet ~/.config/bspwm/scripts/dict.sh
+bind D composite tabclose | buffer
+bind ss exclaim ~/.config/bspwm/scripts/search.sh google
+bind sy exclaim ~/.config/bspwm/scripts/search.sh youtube
 bind i focusinput -l
 bind w tabdetach
 bind gx1 tabonly
@@ -14,10 +20,11 @@ bind ;m hint -W exclaim_quiet transmission-remote -a
 bind ;o composite js "\"org-protocol://store-link?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
 bind ` fillcmdline buffer
 set hintfiltermode vimperator-reflow
+set hintnames numeric
 set hintchars 1234567890
 fixamo
 
-set theme dark
+set theme default
 guiset hoverlink none
 guiset navbar always
 guiset tabs always

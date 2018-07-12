@@ -13,7 +13,7 @@ super + w
 super + c
     ~/.local/bin/org-capture "org-protocol://capture?template=i"
 
-super + {r, grave, R}
+super + {r, grave, shift + r}
     rofi -show {drun, window, run}
 
 
