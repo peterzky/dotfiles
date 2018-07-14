@@ -125,7 +125,7 @@ exec =  emacsclient -e '(polybar-pomodoro)' | tr -d '"' | sed 's/\[/[%{F#C0392B}
 type = custom/script
 interval = 600
 exec-if = ping -q -c 1 -W 1 223.5.5.5 > /dev/null
-exec = curl -s 'https://howoldis.herokuapp.com/api/channels/' | jq '.[0].humantime' | sed 's/"/%{F#87D37C}/; s/"/%{F-}/'
+exec = curl -s 'https://howoldis.herokuapp.com/api/channels/' | jq '.[1].humantime' | sed 's/"/%{F#87D37C}/; s/"/%{F-}/'
 format-prefix = "nixpkgs: "
 
 [module/xwindow]
