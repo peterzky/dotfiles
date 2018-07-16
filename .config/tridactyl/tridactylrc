@@ -16,6 +16,7 @@ bind > tabmove +1
 bind <A-x> fillcmdline
 bind ;d hint -W exclaim_quiet tmux new-window -n download youtube-dl
 bind ;v hint -W exclaim_quiet tmux_mpv
+bind v composite get_current_url | exclaim_quiet tmux_mpv
 bind ;m hint -W exclaim_quiet transmission-remote -a
 bind ;o composite js "\"" + "org-protocol://store-link?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
 bind ;l composite js "\"" + "org-protocol://capture?template=l&url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
