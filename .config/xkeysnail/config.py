@@ -103,6 +103,8 @@ define_keymap(lambda wm_class: wm_class not in ("Emacs", "URxvt"), {
         K("c"): K("Super-c"),
         K("a"): K("Super-z"),
         # org store link only works in firefox
-        K("l"): [K("SEMICOLON"), K("o")]
+        K("l"): [K("SEMICOLON"), K("o")],
+        K("c"): [K("SEMICOLON"), K("l")],
+        K("C-c"): [K("SEMICOLON"), K("L")]
     }
 }, "Emacs-like keys")
