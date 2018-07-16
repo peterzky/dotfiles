@@ -42,6 +42,9 @@ super + space
       "tmux has -t dropdown && exec tmux attach-session -d -t dropdown || exec tmux new-session -s dropdown"; \
       xdotool search --classname dropdown windowraise;)
 
+super + i
+      ~/.config/bspwm/scripts/rambox.sh
+
 super + e; v
       ~/.config/bspwm/scripts/scratchpad.sh "volumeFloat" "ncpamixer"
 
