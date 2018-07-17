@@ -2,6 +2,7 @@ unbind d
 unbind s
 unbind <F1>
 bind d exclaim_quiet ~/.config/bspwm/scripts/dict.sh
+bind x exclaim_quiet tts -sel
 bind D composite tabclose | buffer
 bind ss exclaim ~/.config/bspwm/scripts/search.sh google
 bind sy exclaim ~/.config/bspwm/scripts/search.sh youtube
