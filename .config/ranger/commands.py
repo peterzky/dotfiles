@@ -266,3 +266,10 @@ class mark_tag_narrow(Command):
             self.fm.thisdir.narrow_filter = None
         self.fm.thisdir.refilter()
         self.fm.execute_console("mark_files all=True val=False")
+
+
+class play_all_video(Command):
+    def execute(self):
+        selected_files = self.fm.thistab.get_selection()
+        for f in selected_files:
+           self.fm.execute_command("mpv '" + f.path + "'", flags='f')
