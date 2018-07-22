@@ -4,10 +4,10 @@ import re
 from xkeysnail.transform import *
 
 # [Global modemap] Change modifier keys as in xmodmap
-define_modmap({
-    Key.LEFT_ALT: Key.RIGHT_META,
-    Key.LEFT_META: Key.LEFT_ALT
-})
+# define_modmap({
+#     Key.LEFT_ALT: Key.RIGHT_META,
+#     Key.LEFT_META: Key.LEFT_ALT
+# })
 
 # [Conditional modmap] Change modifier keys in certain applications
 # define_conditional_modmap(re.compile(r'Emacs'), {
