@@ -14,7 +14,7 @@ bind J tabprev
 bind q tabclose
 bind < tabmove -1
 bind > tabmove +1
-bind <A-x> fillcmdline
+bind <A-x> fillcmdline_notrail
 bind ;d hint -W exclaim_quiet tmux new-window -n download youtube-dl
 bind ;v hint -W exclaim_quiet tmux_mpv
 bind v composite get_current_url | exclaim_quiet tmux_mpv
