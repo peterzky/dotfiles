@@ -1,4 +1,5 @@
 # -*- eval: (reopen-as-yadm); -*-
+eval "$(direnv hook zsh)"
 if [ -n "${commands[fzf-share]}" ]; then
     source "$(fzf-share)/key-bindings.zsh"
 fi
