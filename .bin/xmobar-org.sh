@@ -1,1 +1,1 @@
-emacsclient -e "(polybar-clock)" | tr -d '"'
+emacsclient -e "(xmobar-clock)" | tr -d '"'
