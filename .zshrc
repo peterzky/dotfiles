@@ -23,10 +23,8 @@ alias tm="tmux attach || tmux new"
 alias tn="tmux new"
 alias r="ranger-cd"
 
-# transmission
-alias tsmd='transmission-daemon'
-alias tsm='stig'
-alias tsmk='pkill transmission-daemon'
+# pass
+alias pass="EDITOR='emacsclient -c' pass"
 
 ws-clear() {
     local id=`uuidgen`
@@ -59,6 +57,14 @@ function ranger-cd {
 	    cd -- "$(cat "$tempfile")"
 	fi
     rm -f -- "$tempfile"
+}
+
+function countdown(){
+   date1=$((`date +%s` + $1));
+   while [ "$date1" -ge `date +%s` ]; do
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
 }
 
 nixify() {
