@@ -16,8 +16,8 @@ feh -g 500x$Yp+1350+50 \
     --scale-down \
     --auto-zoom \
     --no-screen-clip \
-    --action1 "cp %F /home/peterzky/Sync/screenshot/%V.png;rm %F; notify-send 'screenshot saved!'" \
+    --action1 "cp %F /home/peterzky/Sync/sync/screenshot/%V.png;rm %F; notify-send 'screenshot saved!'" \
     --action2 "rm %F; notify-send 'screenshot deleted!'" \
-    --action3 "$HOME/.config/bspwm/scripts/imgsearch.py %F;rm %F; notify-send 'search image...'" \
+    --action3 "$HOME/.bin/imgsearch.py %F;rm %F; notify-send 'search image...'" \
     /tmp/screenshot.png \
     || notify-send "not screenshot available"
