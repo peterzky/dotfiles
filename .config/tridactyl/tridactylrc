@@ -20,7 +20,7 @@ bind ;v hint -W exclaim_quiet tmux_mpv
 bind v composite get_current_url | exclaim_quiet tmux_mpv
 bind ;m hint -W exclaim_quiet qbittorrent --skip-dialog=true
 bind ;o composite js "\"" + "org-protocol://store-link?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
-bind ;l composite js "\"" + "org-protocol://capture?template=l&url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
+bind ;l composite js "\"" + "org-protocol://context?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
 bind ;L composite js "\"" + "org-protocol://capture?template=p&url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "&body=" + encodeURIComponent(window.getSelection()) + "\"" | exclaim_quiet emacsclient
 
 bind ` jumpprev
