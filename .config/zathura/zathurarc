@@ -23,3 +23,4 @@ set completion-group-bg \#1d1f21
 set completion-group-fg \#eeeeee
 
 map <C-c> feedkeys ":exec tts -clip<Return>"
+map e feedkeys ":exec emacsclient -nc %<Return>"
