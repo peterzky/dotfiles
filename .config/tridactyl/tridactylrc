@@ -29,9 +29,17 @@ set hintnames numeric
 set hintchars 1234567890
 fixamo
 
-set theme quake
+set theme dark
+set searchengine duckduckgo
+
 guiset hoverlink none
 guiset navbar always
 guiset tabs always
 " also set about:config browser.autofocus false
 set allowautofocus false
+
+unbindurl duckduckgo.com j
+unbindurl duckduckgo.com k
+unbindurl duckduckgo.com l
+unbindurl duckduckgo.com d
+unbindurl duckduckgo.com h
