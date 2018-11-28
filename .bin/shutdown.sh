@@ -8,6 +8,8 @@ while test $WIN_IDs; do
     WIN_IDs=$(wmctrl -l | grep -vwE "Desktop$|xfce4-panel$" | cut -f1 -d' ')
 done
 
-sleep 0.1;
+sleep 3;
+
+sync
 
 sudo systemctl $1
