@@ -18,8 +18,14 @@ alias nixproxy='NIX_CURL_FLAGS="-x socks5://127.0.0.1:1080"'
 alias pc='proxychains4'
 
 alias ydm='youtube-dl --ignore-config \
-		      -x \
-		      --proxy "socks5://127.0.0.1:1080"'
+		      --audio-quality 0 \
+                      --extract-audio \
+                      --audio-format mp3 \
+		      --proxy "socks5://127.0.0.1:1080" \
+                      -o "%(title)s.%(ext)s" \
+                      --add-metadata \
+                      --embed-thumbnail \
+                      --metadata-from-title "%(artist)s - %(title)s"'
 
 alias tm="tmux attach || tmux new"
 alias tn="tmux new"
