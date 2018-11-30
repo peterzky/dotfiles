@@ -31,6 +31,8 @@ alias tm="tmux attach || tmux new"
 alias tn="tmux new"
 alias r="ranger-cd"
 
+alias rime-sync="$HOME/.bin/rime-sync.sh"
+
 # pass
 alias pass="EDITOR='emacsclient -c' pass"
 
