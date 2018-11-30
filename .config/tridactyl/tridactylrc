@@ -1,7 +1,7 @@
 unbind d
 unbind s
 unbind <F1>
-bind <Space><Tab> buffer #
+bind <A-Tab> buffer #
 bind d exclaim_quiet ~/.config/bspwm/scripts/dict.sh
 bind x exclaim_quiet tts -sel
 bind D composite tabclose | buffer
@@ -44,3 +44,7 @@ unbindurl duckduckgo.com k
 unbindurl duckduckgo.com l
 unbindurl duckduckgo.com d
 unbindurl duckduckgo.com h
+
+unbindurl discourse.nixos\.org|emacs-china\.org j
+unbindurl discourse.nixos\.org|emacs-china\.org k
+unbindurl discourse.nixos\.org|emacs-china\.org o
