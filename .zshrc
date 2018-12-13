@@ -13,7 +13,7 @@ alias ee='emacsclient -n'
 alias proxy='http_proxy="http://127.0.0.1:8123" https_proxy="http://127.0.0.1:8123"'
 alias yd='youtube-dl --ignore-config \
 		     --proxy "socks5://127.0.0.1:1080"'
-alias nixproxy='NIX_CURL_FLAGS="-x socks5://127.0.0.1:1080"'
+alias nixproxy='NIX_CURL_FLAGS="--preproxy socks5://127.0.0.1:1080"'
 
 alias pc='proxychains4'
 
