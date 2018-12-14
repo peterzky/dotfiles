@@ -10,18 +10,17 @@ setopt histignorealldups
 alias e='emacsclient -nw'
 alias ec='emacsclient -nc'
 alias ee='emacsclient -n'
-alias proxy='http_proxy="http://127.0.0.1:8123" https_proxy="http://127.0.0.1:8123"'
-alias yd='youtube-dl --ignore-config \
-		     --proxy "socks5://127.0.0.1:1080"'
-alias nixproxy='NIX_CURL_FLAGS="--preproxy socks5://127.0.0.1:1080"'
+# alias proxy='http_proxy="http://127.0.0.1:8080" https_proxy="http://127.0.0.1:8080"'
+# alias yd='youtube-dl --ignore-config \
+# 		     --proxy "socks5://127.0.0.1:1080"'
+# alias nixproxy='NIX_CURL_FLAGS="--preproxy socks5://127.0.0.1:1080"'
 
-alias pc='proxychains4'
+# alias pc='proxychains4'
 
 alias ydm='youtube-dl --ignore-config \
 		      --audio-quality 0 \
                       --extract-audio \
                       --audio-format mp3 \
-		      --proxy "socks5://127.0.0.1:1080" \
                       -o "%(title)s.%(ext)s" \
                       --add-metadata \
                       --embed-thumbnail \
@@ -69,13 +68,6 @@ function ranger-cd {
     rm -f -- "$tempfile"
 }
 
-function countdown(){
-   date1=$((`date +%s` + $1));
-   while [ "$date1" -ge `date +%s` ]; do
-     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
-     sleep 0.1
-   done
-}
 
 nixify() {
   if [ ! -e ./.envrc ]; then
