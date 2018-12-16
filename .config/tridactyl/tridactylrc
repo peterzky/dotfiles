@@ -27,6 +27,7 @@ bind ;o composite js "\"" + "org-protocol://store-link?url=" + encodeURIComponen
 bind ;l composite js "\"" + "org-protocol://context?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "\"" | exclaim_quiet emacsclient
 bind ;L composite js "\"" + "org-protocol://capture?template=p&url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "&body=" + encodeURIComponent(window.getSelection()) + "\"" | exclaim_quiet emacsclient
 
+bind ;B composite js "\"" + "org-protocol://capture?template=b&url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title) + "&body=" + encodeURIComponent(window.getSelection()) + "\"" | exclaim_quiet emacsclient
 " bind ` jumpprev
 set hintfiltermode vimperator-reflow
 set hintnames numeric
