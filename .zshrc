@@ -3,7 +3,8 @@ eval "$(direnv hook zsh)"
 if [ -n "${commands[fzf-share]}" ]; then
     source "$(fzf-share)/key-bindings.zsh"
 fi
-export EDITOR='editor'
+export EDITOR='emacsclient -c -nw'
+export VISUAL='emacsclient -c -nw'
 
 setopt histignorealldups
 

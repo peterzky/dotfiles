@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-choices="Agenda\nTodo\nProjects\nInbox\nRSS\nEMail\nwiki"
+choices="Agenda\nTodo\nProjects\nInbox\nRSS\nEMail\nArea\ns"
 
 chosen=$(echo -e "$choices" | rofi -dmenu -i -p ORG)
 
-wiki=$(echo $chosen | sed 's/wiki\ //')
+search=$(echo $chosen | sed 's/s //')
 
 run()
 {
@@ -16,7 +16,8 @@ case "$chosen" in
     RSS) run "(call-interactively 'elfeed)";;
     EMail) run "(call-interactively 'mu4e)";;
     Agenda) run "(call-interactively 'org-agenda-list)";;
+    Area) emacsclient -nc -e "(find-file \"~/Sync/sync/org/agenda/area.org\")";;
     Projects) emacsclient -nc -e "(find-file \"~/Sync/sync/org/agenda/project.org\")";;
     Inbox) emacsclient -nc -e "(find-file \"~/Sync/sync/org/agenda/inbox.org\")";;
-    wiki*) run "(org-search-view nil \"$wiki\" nil)"
+    s*) emacsclient -nc -e "(org-search-view nil \"$search\" nil)"
 esac
