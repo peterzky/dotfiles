@@ -1,10 +1,9 @@
 #!/bin/sh
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/nsf/gocode
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/rogpeppe/godef
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u golang.org/x/tools/cmd/goimports
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/motemen/gore
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/alecthomas/gometalinter
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u github.com/zmb3/gogetdoc
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u golang.org/x/tools/cmd/guru
-http_proxy="http://localhost:8123" https_proxy="http://localhost:8123" go get -v -u golang.org/x/tools/cmd/gorename
-gometalinter --install
+yadm decrypt
+echo "cloning xmonad.."
+git clone git@github.com:peterzky/myxmonad.git $HOME/.xmonad
+echo "cloning emacs.d.."
+rm -rf $HOME/.emacs.d
+git clone git@github.com:peterzky/emacs.d.git $HOME/.emacs.d
+echo "cloning nix-config..."
+git clone git@gitlab.com:peterzky/nix-config.git $HOME/nixos
