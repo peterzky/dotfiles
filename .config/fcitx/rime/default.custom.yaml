@@ -5,3 +5,7 @@ patch:
     good_old_caps_lock: false
   "switcher/hotkeys":
     - F4
+  ascii_composer/switch_key:
+    Caps_Lock: noop
+    Shift_L: commit_code
+    Shift_R: inline_ascii
