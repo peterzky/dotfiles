@@ -36,14 +36,7 @@ alias rime-sync="$HOME/.bin/rime-sync.sh"
 # pass
 alias pass="EDITOR='emacsclient -c' pass"
 
-ws-clear() {
-    local id=`uuidgen`
-    mkdir -p .archive/$id/
-    mv * .archive/$id/
-    echo "save as" $id
-    echo "all cleared!"
-}
-
+alias gfw-update="$HOME/.bin/gfw-update.sh"
 
 backup() {
     sudo mount -U 452eef84-ba13-4e5f-82e9-0027a4b40b4f -o rw /home/peterzky/backup

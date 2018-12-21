@@ -15,7 +15,7 @@ case "$chosen" in
     Todo) run "(progn (org-todo-list)(delete-other-windows)(org-agenda-redo-all))";;
     RSS) run "(call-interactively 'elfeed)";;
     EMail) run "(call-interactively 'mu4e)";;
-    Agenda) run "(call-interactively 'org-agenda-list)";;
+    Agenda) run "(progn (call-interactively 'org-agenda-list)(org-agenda-day-view))";;
     Area) emacsclient -nc -e "(find-file \"~/Sync/sync/org/agenda/area.org\")";;
     Projects) emacsclient -nc -e "(find-file \"~/Sync/sync/org/agenda/project.org\")";;
     Inbox) emacsclient -nc -e "(find-file \"~/Sync/sync/org/agenda/inbox.org\")";;
