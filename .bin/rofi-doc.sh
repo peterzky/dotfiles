@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
-choices="PDF\nMindMap\nDocViewer\nCalibre"
+declare -A dict
+
+dict=(
+    ["Cheat"]="$HOME/.bin/rofi-cheat.sh"
+    ["PDF"]="zathura"
+    ["MindMap"]="XMind"
+    ["DocViewer"]="zeal"
+    ["Calibre"]="calibre"
+)
+
+choices=$(printf "%s\n" "${!dict[@]}")
 
 chosen=$(echo -e "$choices" | rofi -dmenu -i -p DOC)
 
-case "$chosen" in
-    PDF) zathura;;
-    MindMap) XMind;;
-    DocViewer) zeal;;
-    Calibre) calibre;;
-esac
+if [[ -n "${dict[$chosen]}" ]]; then
+    eval "${dict[$chosen]}"
+else
+    exit 0
+fi

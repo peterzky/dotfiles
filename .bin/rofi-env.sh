@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
-choices="VirtualBox\nWireShark\nLxappearance\nQt5ct\nFcitx"
+declare -A dict
 
-chosen=$(echo -e "$choices" | rofi -dmenu -i -p MSG)
+dict=(
+    ["VirtualBox"]="VirtualBox"
+    ["WireShark"]="sudo wireshark"
+    ["Lxappearance"]="lxappearance"
+    ["Qt5ct"]="qt5ct"
+    ["Fcitx"]="fcitx-config-gtk3"
+)
 
-case "$chosen" in
-    VirtualBox) VirtualBox;;
-    WireShark) sudo wireshark;;
-    Lxappearance) lxappearance;;
-    Qt5ct) qt5ct;;
-    Fcitx) fcitx-config-gtk3;;
-esac
+choices=$(printf "%s\n" "${!dict[@]}")
+
+chosen=$(echo -e "$choices" | rofi -dmenu -i -p ENV)
+
+if [[ -n "${dict[$chosen]}" ]]; then
+    eval "${dict[$chosen]}"
+else
+    exit 0
+fi

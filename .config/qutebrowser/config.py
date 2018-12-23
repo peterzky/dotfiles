@@ -25,7 +25,7 @@ c.completion.quick = False
 c.confirm_quit = ['never']
 
 # proxy
-c.content.proxy = 'http://127.0.0.1:3128'
+# c.content.proxy = 'http://127.0.0.1:3128'
 
 c.editor.command = ['emacsclient', '-nc', '{file}']
 c.fonts.completion.category = 'bold ' + fontsize + 'pt "Sarasa UI SC"'
