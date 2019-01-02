@@ -5,7 +5,7 @@ dict=(
     ["Telegram"]="telegram-desktop"
     ["HexChat"]="hexchat"
     ["IeaseMusic"]="ieaseMusic"
-    ["WeChat"]="wewechat"
+    ["WeChat"]="chromium --app='https://wx.qq.com'"
     ["CMus"]="urxvtc -geometry 130x26-500+200 -e cmus"
     ["MusicBox"]="urxvtc -geometry 130x26-500+200 -e musicbox"
 )
