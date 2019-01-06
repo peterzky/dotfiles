@@ -38,12 +38,17 @@ alias pass="EDITOR='emacsclient -c' pass"
 
 alias gfw-update="$HOME/.bin/gfw-update.sh"
 
-backup() {
-    sudo mount -U 452eef84-ba13-4e5f-82e9-0027a4b40b4f -o rw /home/peterzky/backup
+function backup() {
+    sudo mount -U 22522014-03f8-4e07-87f4-9c9b21bdd7c7 -o rw /home/peterzky/backup
     rsync -av --delete /home/peterzky/Sync /home/peterzky/backup/syncthing_backup
     sync
     sudo umount /home/peterzky/backup
     echo "backup complete! you can unplug the drive now."
+}
+
+function wpm() {
+    local total=`xclip -o | wc -w`
+    echo $(($total / 5))
 }
 
 

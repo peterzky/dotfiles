@@ -7,6 +7,7 @@ dict=(
     ["MindMap"]="XMind"
     ["DocViewer"]="zeal"
     ["Calibre"]="calibre"
+    ["Xournal"]="xournal"
 )
 
 choices=$(printf "%s\n" "${!dict[@]}")
