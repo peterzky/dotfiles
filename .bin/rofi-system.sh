@@ -3,7 +3,7 @@
 declare -A dict
 
 dict=(
-    ["Shutdown"]="$HOME/.bin/shutdown.sh poweroff"
+    ["Poweroff"]="$HOME/.bin/shutdown.sh poweroff"
     ["Reboot"]="$HOME/.bin/shutdown.sh reboot"
     ["Reload"]="pkill xmobar; xmonad --recompile; xmonad --restart"
     ["Hibernate"]="sudo systemctl hibernate"

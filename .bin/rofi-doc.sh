@@ -5,7 +5,7 @@ dict=(
     ["Cheat"]="$HOME/.bin/rofi-cheat.sh"
     ["PDF"]="zathura"
     ["MindMap"]="XMind"
-    ["DocViewer"]="zeal"
+    ["Zeal"]="zeal"
     ["Calibre"]="calibre"
     ["Xournal"]="xournal"
 )
