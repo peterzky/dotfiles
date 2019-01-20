@@ -5,7 +5,7 @@ bind --mode=ex <Tab> ex.insert_space_or_completion
 bind --mode=ex <ArrowDown> ex.next_completion
 bind --mode=ex <ArrowUp> ex.prev_completion
 bind <A-Tab> buffer #
-bind d exclaim_quiet ~/.config/bspwm/scripts/dict.sh
+bind d exclaim_quiet ~/.bin/dict.sh
 bind x exclaim_quiet tts -sel
 bind D composite tabclose | buffer
 bind ss exclaim ~/.config/bspwm/scripts/search.sh google

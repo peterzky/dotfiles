@@ -3,7 +3,7 @@ declare -A dict
 
 dict=(
     ["VirtualBox"]="VirtualBox"
-    ["WireShark"]="sudo wireshark"
+    ["WireShark"]="wireshark"
     ["Lxappearance"]="lxappearance"
     ["Qt5ct"]="qt5ct"
     ["Fcitx"]="fcitx-config-gtk3"

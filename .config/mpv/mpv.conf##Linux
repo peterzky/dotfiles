@@ -1,4 +1,6 @@
-profile=opengl-hq
+vo=gpu
+gpu-api=vulkan
+profile=gpu-hq
 screenshot-template='~/Desktop/%F (%P) %n'
 autofit-larger=70%x70%
 cache=yes
