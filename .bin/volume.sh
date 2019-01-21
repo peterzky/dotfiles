@@ -29,7 +29,7 @@ function send_notification {
     bar=$(seq --separator="─" 0 "$((volume / 5))" | sed 's/[0-9]//g')
     # Send the notification
     # dunstify -i $iconSound -r 2593 -u normal "$volume    $bar"
-    dunstify -r 2593 -u normal "Vol : $volume    $bar"
+    dunstify -r 2593 -u normal -t 1000 "Vol : $volume    $bar"
   fi
 }
 
