@@ -4,7 +4,8 @@ declare -A dict
 dict=(
     ["Telegram"]="telegram-desktop"
     ["HexChat"]="hexchat"
-    ["IeaseMusic"]="ieaseMusic"
+    # ["IeaseMusic"]="ieaseMusic"
+    ["Audacious"]="audacious"
     ["WeChat"]="chromium --app='https://wx.qq.com'"
     ["CMus"]="urxvtc -geometry 130x26-500+200 -e cmus"
     ["MusicBox"]="urxvtc -geometry 130x26-500+200 -e musicbox"

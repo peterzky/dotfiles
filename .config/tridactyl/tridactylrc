@@ -52,3 +52,5 @@ unbindurl duckduckgo.com h
 unbindurl discourse.nixos\.org|emacs-china\.org j
 unbindurl discourse.nixos\.org|emacs-china\.org k
 unbindurl discourse.nixos\.org|emacs-china\.org o
+
+autocmd TabEnter .* unfocus

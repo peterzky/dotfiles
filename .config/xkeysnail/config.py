@@ -5,8 +5,8 @@ from xkeysnail.transform import *
 
 # [Global modemap] Change modifier keys as in xmodmap
 # define_modmap({
-#     Key.LEFT_ALT: Key.RIGHT_META,
-#     Key.LEFT_META: Key.LEFT_ALT
+#     Key.RIGHT_ALT: Key.RIGHT_META,
+#     Key.LEFT_CTRL: Key.CAPSLOCK
 # })
 
 # [Conditional modmap] Change modifier keys in certain applications
@@ -19,7 +19,10 @@ from xkeysnail.transform import *
 # Carabiner and caps2esc for ideas and concept.
 define_multipurpose_modmap(
     {Key.ENTER: [Key.ENTER, Key.RIGHT_CTRL],
-    Key.CAPSLOCK: [Key.ESC, Key.LEFT_CTRL]})
+     Key.CAPSLOCK: [Key.ESC, Key.LEFT_CTRL]
+     # Key.BACKSLASH: [Key.BACKSLASH, Key.RIGHT_META],
+     # Key.TAB: [Key.TAB, Key.LEFT_META]
+    })
 
 
 # Keybindings for Firefox/Chrome
