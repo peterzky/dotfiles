@@ -69,7 +69,7 @@ c.keyhint.radius = 6
 c.messages.timeout = 2000
 c.prompt.filebrowser = True
 c.prompt.radius = 8
-c.scrolling.bar = False
+c.scrolling.bar = 'never'
 c.scrolling.smooth = False
 c.search.ignore_case = 'smart'
 c.search.incremental = True
@@ -81,7 +81,7 @@ c.tabs.background = False
 c.tabs.close_mouse_button = 'middle'
 c.tabs.close_mouse_button_on_bar = 'new-tab'
 c.tabs.favicons.scale = 1.0
-c.tabs.favicons.show = True
+c.tabs.favicons.show = 'always'
 c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
 c.tabs.indicator.width = 3
 c.tabs.last_close = 'close'
@@ -100,8 +100,8 @@ c.tabs.title.format_pinned = '{index}'
 c.tabs.width = '20%'
 c.tabs.wrap = False
 c.tabs.mode_on_change = 'restore'
-c.url.default_page = 'https://google.com/'
-c.url.start_pages = 'https://google.com'
+c.url.default_page = 'https://duckduckgo.com/'
+c.url.start_pages = 'https://duckduckgo.com'
 
 # colors
 c.colors.completion.fg = "#D2D7D3"
@@ -129,14 +129,14 @@ c.colors.statusbar.url.error.fg = "#8A2F58"
 c.colors.statusbar.url.warn.fg = "#914E89"
 c.colors.statusbar.url.hover.fg = "#2B7694"
 c.colors.tabs.bar.bg = "#222222"
-c.colors.tabs.even.fg = "#222222"
-c.colors.tabs.odd.fg = "#222222"
-c.colors.tabs.even.bg = "#ecf0f1"
-c.colors.tabs.odd.bg = "#ecf0f1"
-c.colors.tabs.selected.even.fg = "white"
-c.colors.tabs.selected.even.bg = "#222222"
-c.colors.tabs.selected.odd.fg = "white"
-c.colors.tabs.selected.odd.bg = "#222222"
+c.colors.tabs.even.fg = "#3498db"
+c.colors.tabs.odd.fg = "#3498db"
+c.colors.tabs.even.bg = "#111111"
+c.colors.tabs.odd.bg = "#111111"
+c.colors.tabs.selected.even.fg = "#111111"
+c.colors.tabs.selected.even.bg = "#3498db"
+c.colors.tabs.selected.odd.fg = "#111111"
+c.colors.tabs.selected.odd.bg = "#3498db"
 c.colors.tabs.indicator.start = "#222222"
 c.colors.tabs.indicator.stop = "#222222"
 c.colors.tabs.indicator.error = "#8A2F58"
@@ -161,7 +161,7 @@ c.colors.prompts.bg = "#DDDDDD"
 c.colors.prompts.selected.bg = "#4779B3"
 
 # search engines
-c.url.searchengines['DEFAULT'] = 'https://www.google.com/search?q={}'
+c.url.searchengines['DEFAULT'] = 'https://www.duckduckgo.com/?q={}'
 c.url.searchengines['a'] = 'https://wiki.archlinux.org/?search={}'
 c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages/?0&K={}'
 c.url.searchengines['y'] = 'https://www.youtube.com/results?search_query={}'
@@ -186,10 +186,9 @@ config.bind(
 )
 config.bind(' fd', 'set-cmd-text -s :quickmark-load')
 # mpv
-c.aliases[
-    'mpv'] = 'spawn --userscript ~/.config/qutebrowser/scripts/view_in_mpv'
-config.bind(' pl', 'hint links spawn go-mpv {hint-url}')
-config.bind(' pp', 'mpv')
+# c.aliases['mpv'] = 'spawn --userscript ~/.config/qutebrowser/scripts/view_in_mpv'
+config.bind(' pl', 'hint links spawn mpv {hint-url}')
+# config.bind(' pp', 'mpv')
 
 # config.bind(' <Tab>', 'tab-focus last')
 config.unbind('d')
@@ -205,6 +204,7 @@ config.bind('i', 'hint inputs')
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('ya', 'hint links yank-primary')
 config.bind(';m', 'hint magnet yank-primary')
+config.bind(';v', 'hint links spawn tmux new-window -n mpv "mpv --x11-name mpvFloating {hint-url}"')
 config.bind('gh', 'home')
 config.bind('<ctrl+e>', 'scroll-page 0 0.3')
 
@@ -222,12 +222,12 @@ config.bind('<ctrl+p>', 'completion-item-focus prev', mode='command')
 config.bind('<ctrl+g>', 'leave-mode;;spawn fcitx-remote -c', mode='command')
 
 # proxy toggle
-config.bind('<alt+a>',
-            'set content.proxy "http://127.0.0.1:3128" ;; message-info "Proxy Mode: Auto"')
-config.bind('<alt+d>',
-            'set content.proxy "socks5://127.0.0.1:1080" ;; message-info "Proxy Mode: Proxy"')
-config.bind('<alt+k>',
-            'config-unset content.proxy ;; message-info "Proxy Disabled"')
+# config.bind('<alt+a>',
+#             'set content.proxy "http://127.0.0.1:3128" ;; message-info "Proxy Mode: Auto"')
+# config.bind('<alt+d>',
+#             'set content.proxy "socks5://127.0.0.1:1080" ;; message-info "Proxy Mode: Proxy"')
+# config.bind('<alt+k>',
+#             'config-unset content.proxy ;; message-info "Proxy Disabled"')
 
 # insert mode binding
 config.bind('<ctrl+p>', 'fake-key <Up>', mode='insert')
