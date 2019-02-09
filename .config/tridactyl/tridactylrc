@@ -1,7 +1,6 @@
 unbind d
 unbind s
 unbind <F1>
-bind --mode=ex <Tab> ex.insert_space_or_completion
 bind --mode=ex <ArrowDown> ex.next_completion
 bind --mode=ex <ArrowUp> ex.prev_completion
 bind <A-Tab> buffer #
@@ -15,6 +14,8 @@ bind w tabdetach
 bind gx1 tabonly
 bind K tabnext
 bind J tabprev
+bind j scrollline 5
+bind k scrollline -5
 bind q tabclose
 bind < tabmove -1
 bind > tabmove +1

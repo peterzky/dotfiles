@@ -1,4 +1,5 @@
 ! Xft.dpi: 190
 ! Xcursor.size: 48
 
-URxvt.font: xft:Sarasa Term SC:pixelsize=18, xft:Iosevka:size=13, xft:Nerd Font:size=13
+! URxvt.font: xft:Sarasa Term SC:pixelsize=18, xft:Iosevka:size=13, xft:Nerd Font:size=13
+rofi.dpi: 107

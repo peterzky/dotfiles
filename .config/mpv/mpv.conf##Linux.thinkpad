@@ -1,5 +1,5 @@
 autofit
-# vo=vaapi
+vo=vaapi
 # hwdec-codecs=all
 hwdec=vaapi
 cache=yes
