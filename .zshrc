@@ -46,16 +46,16 @@ function backup() {
     echo "backup complete! you can unplug the drive now."
 }
 
-function wpm() {
-    local total=`xclip -o | wc -w`
-    echo $(($total / 5))
-}
+# function wpm() {
+#     local total=`xclip -o | wc -w`
+#     echo $(($total / 5))
+# }
 
 
-clear-cache() {
-    find ~/.cache -type f -atime +1 -print -delete
-    find ~/.cache -type f -size 2M -print -delete
-}
+# clear-cache() {
+#     find ~/.cache -type f -atime +1 -print -delete
+#     find ~/.cache -type f -size 2M -print -delete
+# }
 
 function ranger-cd {
     tempfile="$(mktemp -t tmp.XXXXXX)"
@@ -65,24 +65,4 @@ function ranger-cd {
 	    cd -- "$(cat "$tempfile")"
 	fi
     rm -f -- "$tempfile"
-}
-
-
-nixify() {
-  if [ ! -e ./.envrc ]; then
-    echo "use nix" > .envrc
-    direnv allow
-  fi
-  if [ ! -e default.nix ]; then
-    cat > default.nix <<'EOF'
-with import <nixpkgs> {};
-stdenv.mkDerivation {
-  name = "env";
-  buildInputs = [
-    bashInteractive
-  ];
-}
-EOF
-    emacsclient -nc default.nix
-  fi
 }

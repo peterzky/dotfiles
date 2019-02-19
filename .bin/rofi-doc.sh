@@ -3,7 +3,7 @@ declare -A dict
 
 dict=(
     ["Cheat"]="$HOME/.bin/rofi-cheat.sh"
-    ["PDF"]="zathura"
+    ["Okular"]="okular"
     ["MindMap"]="XMind"
     ["Zeal"]="zeal"
     ["Calibre"]="calibre"
