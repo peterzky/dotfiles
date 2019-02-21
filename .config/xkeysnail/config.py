@@ -47,7 +47,9 @@ define_keymap(
 define_keymap(
     re.compile("st-256color"), {
         K("M-w"): K("C-Shift-c"),
-        K("C-y"): K("C-Shift-v")
+        K("C-y"): K("C-Shift-v"),
+        K("M-v"): K("Shift-page_up"),
+        K("C-v"): K("Shift-page_down")
     })
 
 # Emacs-like keybindings in non-Emacs applications
