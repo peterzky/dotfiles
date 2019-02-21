@@ -17,6 +17,7 @@ use_nix() {
     [[ shell.nix -nt "$cache" ]];
   then
     [ -d .direnv ] || mkdir .direnv
+    IN_NIX_SHELL=1 nix-instantiate --add-root ".direnv/shell.drv" --indirect default.nix > /dev/null
     local tmp=$(nix-shell --show-trace --pure "$@" \
       --run "\"$direnv\" dump bash")
     echo "$tmp" > "$cache"

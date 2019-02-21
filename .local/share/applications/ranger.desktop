@@ -2,5 +2,5 @@
 Version=1.0
 Type=Application
 Name=Ranger
-Exec=urxvtc -title rangerfloat -e ranger %f
+Exec=st -t rangerfloat -e ranger %f
 MimeType=inode/directory;
